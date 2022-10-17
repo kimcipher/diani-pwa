@@ -35,6 +35,7 @@
     "react-ios-pwa-prompt": "^1.8.4",
     "react-open-weather": "^1.3.0",
     "react-pwa-add-to-homescreen": "^1.1.7",
+    "react-pwa-app": "^2.2.3",
     "react-pwa-install": "^1.0.12",
     "react-pwa-install-prompt": "^1.0.5",
     "react-pwa-installer-prompt": "^1.0.8",

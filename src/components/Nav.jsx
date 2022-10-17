@@ -5,23 +5,15 @@ import toast from "react-hot-toast";
 import {addHome, reallogo, installation} from "./icons"
 import WeatherIcon from "../components/WeatherIcon"
 import {NavLink} from "react-router-dom"
-import ReactPWAInstallProvider, { useReactPWAInstall } from "react-pwa-install";
+import { usePwa } from "react-pwa-app";
 
 function Nav() {
+  const pwa = usePwa();
+
+  console.log(pwa.registration); // ServiceWorkerRegistration
+
   const [supportsPWA, setSupportsPWA] = useState(true);
   const [promptInstall, setPromptInstall] = useState(null);
-
-  const { pwaInstall, supported, isInstalled } = useReactPWAInstall();
- 
-  const handleClick = () => {
-    pwaInstall({
-      title: "Install Web App",
-      logo: logo,
-      description: "This is a very good app that does a lot of useful stuff. ",
-    })
-      .then(() => alert("App installed successfully or instructions for install shown"))
-      .catch(() => alert("User opted out from installing"));
-  };
 
   useEffect(() => {
     const handler = (e) => {
@@ -79,11 +71,7 @@ function Nav() {
         <div className="pwa-con">
         {/* {supportsPWA ? ( */}
           <div className="pwa-btn">
-            {supported() && !isInstalled() && (
-              <button type="button" onClick={handleClick}>
-                Install
-              </button>
-            )}
+          <button onClick={pwa.install}>install </button>
           </div>
             {/* ) : null} */}
         </div>

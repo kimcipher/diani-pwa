@@ -11,7 +11,7 @@ import { chain, configureChains, createClient, WagmiConfig } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 import reportWebVitals from './reportWebVitals';
-import ReactPWAInstallProvider from "react-pwa-install";
+import ReactPwa from "react-pwa-app";
 
 const { chains, provider, webSocketProvider } = configureChains(
   [
@@ -49,9 +49,40 @@ root.render(
     <React.StrictMode>
       <WagmiConfig client={wagmiClient}>
         <RainbowKitProvider chains={chains} theme={darkTheme()}>
-        <ReactPWAInstallProvider enableLogging>
+        <ReactPwa
+    test //is to install in localhost, not required
+    suspense={<>
+      a preloader to load the service worker in the application 
+      is the best way to not overload with component calls.
+      this ensures that the rest of the application only loads after the sw is checked
+      default is children
+    </>}
+    config={{
+      swUrl: "/service-worker.js", // sw file in public default is service-worker.js
+      onUpdate: (reg) => {
+        alert("sw cache was updated");
+        console.log(reg);
+      },
+      onSuccess: (reg) => {
+        alert("sw success installed");
+        console.log(reg);
+      },
+      onError: (reg) => {
+        alert("sw error to install");
+        console.log(reg);
+      },
+      onPrompt:(e) => {
+        if(e.outcome === 'accepted'){
+          console.log('user click on install and accept')
+        }
+        if(e.outcome === 'dismissed'){
+          console.log('user click on install and refuse')
+        }
+      },
+    }}
+  >
           <App /><PWAPrompt promptOnVisit={2} timesToShow={300} copyClosePrompt="Close" permanentlyHideOnDismiss={false} delay={5000}/>
-        </ReactPWAInstallProvider>
+          </ReactPwa>,
         </RainbowKitProvider>
       </WagmiConfig>
     </React.StrictMode>
