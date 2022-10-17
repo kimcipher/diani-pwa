@@ -11,31 +11,6 @@ function Nav() {
   const pwa = usePwa();
 
   console.log(pwa.registration); // ServiceWorkerRegistration
-
-  const [supportsPWA, setSupportsPWA] = useState(true);
-  const [promptInstall, setPromptInstall] = useState(null);
-
-  useEffect(() => {
-    const handler = (e) => {
-      e.preventDefault();
-      setSupportsPWA(true);
-      setPromptInstall(e);
-    };
-    window.addEventListener("beforeinstallprompt", handler);
-    return () => window.removeEventListener("transitionend", handler);
-  }, []);
-
-  const addToHomeScreen = (e) => {
-    e.preventDefault();
-    if (promptInstall) {
-      promptInstall.prompt();
-    }
-    if (!supportsPWA) {
-      toast.error("PWA not supported");
-    }
-  };
- 
- 
   const currentTime = new Date().toLocaleTimeString();
   console.log(currentTime);
   
@@ -69,9 +44,9 @@ function Nav() {
         </div>
         {/* <h4><WalletConnect/></h4> */}
         <div className="pwa-con">
-        {/* {supportsPWA ? ( */}
+        {/* {supportsPWA ? (  */}
           <div className="pwa-btn">
-          <button onClick={pwa.install}>install </button>
+          <div><h5>Get the Diani App<br/>⭐⭐⭐⭐⭐</h5></div> <button onClick={pwa.install}>Install</button>
           </div>
             {/* ) : null} */}
         </div>
