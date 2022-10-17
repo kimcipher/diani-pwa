@@ -23,13 +23,7 @@ import Collapsible from "react-collapsible";
 const Lalo = (props) => {
   const d = new Date();
   let hour = d.getHours();
-  function randomNumber(min, max) { 
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-} 
-const rand = randomNumber(1, 10)
-const bookings_idx = rand + (hour*5)
+const bookings_idx = hour + (hour*5)
   console.log(props);
   // function clicked(){
   //     setItIsOpen(false)
