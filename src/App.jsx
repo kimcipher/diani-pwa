@@ -82,10 +82,10 @@ function App() {
         containerStyle={{}}
         toastOptions={{
           // Define default options
-          className: "",
+          className: "installation-toaster",
           duration: 5000,
           style: {
-            background: "#363636",
+            background: "#000",
             color: "#fff",
           },
         }}
