@@ -14,7 +14,7 @@ import { UnstoppableDomain } from "../Modal/UnstoppableDomain";
 
 function HowItWorks() {
     const [open, setOpen] = useState(false);
-    const [domain, setDomain] = useState("dianiapp.crypto");
+    const [domain, setDomain] = useState("lalocommunities.crypto");
     const [records, setRecords] = useState([]);
   
     const showModal = () => {
@@ -56,7 +56,7 @@ function HowItWorks() {
         }
         try {
           const res = await axios.get(
-            `https://unstoppabledomains.g.alchemy.com/domains/brad.crypto`,
+            `https://unstoppabledomains.g.alchemy.com/domains/lalocommunities.crypto`,
             {
               headers: { Authorization: `Bearer qP8ISjG-2328Lc6eWQQGKJZtc-mJnjOT` },
             }
