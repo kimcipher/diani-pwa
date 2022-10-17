@@ -51,24 +51,18 @@ root.render(
         <RainbowKitProvider chains={chains} theme={darkTheme()}>
         <ReactPwa
     test //is to install in localhost, not required
-    suspense={<>
-      a preloader to load the service worker in the application 
-      is the best way to not overload with component calls.
-      this ensures that the rest of the application only loads after the sw is checked
-      default is children
-    </>}
     config={{
       swUrl: "/service-worker.js", // sw file in public default is service-worker.js
       onUpdate: (reg) => {
-        alert("sw cache was updated");
+        // alert("sw cache was updated");
         console.log(reg);
       },
       onSuccess: (reg) => {
-        alert("sw success installed");
+        // alert("sw success installed");
         console.log(reg);
       },
       onError: (reg) => {
-        alert("sw error to install");
+        // alert("sw error to install");
         console.log(reg);
       },
       onPrompt:(e) => {

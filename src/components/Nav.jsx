@@ -12,7 +12,7 @@ function Nav() {
 
   console.log(pwa.registration); // ServiceWorkerRegistration
   const currentTime = new Date().toLocaleTimeString();
-  console.log(currentTime);
+  console.log("#######",pwa);
   
   return ( 
     <nav>
@@ -44,10 +44,14 @@ function Nav() {
         </div>
         {/* <h4><WalletConnect/></h4> */}
         <div className="pwa-con">
+        {pwa.isInstalled?(
+            <div className="pwa-btn">
+            <div><h5>Get the Diani App<br/>⭐⭐⭐⭐⭐</h5></div> <button onClick={pwa.install}>Install</button>
+            </div>
+        ): null}
+        
         {/* {supportsPWA ? (  */}
-          <div className="pwa-btn">
-          <div><h5>Get the Diani App<br/>⭐⭐⭐⭐⭐</h5></div> <button onClick={pwa.install}>Install</button>
-          </div>
+          
             {/* ) : null} */}
         </div>
       </div>
