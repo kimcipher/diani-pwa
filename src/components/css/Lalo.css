@@ -1,0 +1,116 @@
+.Lalo-main{
+    position: fixed;
+    top:25vh;
+    margin:auto;
+    background-color:#1B254A;
+    height:auto;
+    width:80vw;
+    left:5vw;
+    border-radius:20px;
+    display:block;
+    padding:5vw;
+    transition:all 1s ease-in-out;
+}
+.Lalo-main p{
+    background-color: transparent;
+    font-weight:bold;
+    font-size:0.8em;
+    text-align:left ;
+    line-height: 20px;
+}
+.closest{
+    color:#fff;
+    rotate: 45deg;
+    font-size: 2em;
+    border-radius: 50%;
+    cursor:pointer;
+    position:absolute;
+    
+}
+@media screen and (min-width:1000px){
+    .closest{
+        margin-top:-50px;
+    }
+}
+.child{
+    width:100%;
+    height:auto;
+    text-align: left;
+    margin-left: 20px;
+    padding-top:10px;
+}
+.child-container{
+    display: flex;
+    flex-wrap:wrap;
+    width:90%;
+}
+.child-container-child{
+    width:40%;
+    height:auto;
+    margin-right:10px;
+    margin-bottom:10px;
+    align-items: left;
+    text-align: left;
+
+}
+.child-container-child-spec{
+    width:40%;
+    height:auto;
+    margin-right:10px;
+    margin-bottom:10px;
+    align-items: left;
+    text-align: left;
+    min-height:130px
+}
+.child-container-child-spec .collapsible{
+    width:100%;
+    margin-left: 15px;
+    font-size: 0.8em;
+    border:1px solid gray;
+    margin-top:5px;
+    padding:5px;
+    border-radius: 5px;
+}
+.child-container-child-spec .collapsible p{
+    font-size: 0.7em;
+}
+.child-container-child-spec h3{
+    color:#fff;
+    font-size: 15px;
+    margin-bottom: 0;
+    margin-left: 15px;
+    font-weight: bold;
+}
+.child-closer{
+    position:absolute;
+    left:10%;
+    width:40px;
+    height:40px;
+    cursor: pointer;
+    z-index: 10000000;
+}
+@media screen and (min-width:1000px){
+    .Lalo-main{
+        width:40vw;
+        left:25vw;
+    }
+    .closest{
+        position: fixed;
+        right:28vw;
+        font-size: 3em;
+    }
+    .child-container{
+        width:70%;
+    }
+}
+.spec{
+    text-align: right;
+    width:90%;
+}
+
+/* //group anagrams 
+longest  */
+
+.small{
+    font-size: 5px;
+}

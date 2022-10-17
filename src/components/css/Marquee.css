@@ -1,0 +1,18 @@
+.def-main{
+    width:auto;
+    height:auto;
+    min-width: 100vw;
+    text-align: center;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    background-color: #000;
+}
+marquee{
+    background-color: #000;
+}
+marquee p{
+    background-color: #000;
+    padding-top:5px;
+}

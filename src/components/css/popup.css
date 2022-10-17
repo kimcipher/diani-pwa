@@ -1,0 +1,25 @@
+.slack{
+    position:fixed;
+    max-width:400px;
+    height:auto;
+    width:90vw;
+    bottom:10vh;
+    padding:5px 0;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    background:#241845;
+    border-radius:10px;
+    left:20px
+}
+.slack *{
+    color: #e268f3;
+}
+.closer-con{
+    width:70px;
+}
+.closer{
+    font-size: 2.5em;
+    rotate: 45deg;
+    font-weight: bold;
+}

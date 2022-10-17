@@ -1,0 +1,71 @@
+.activities{
+    width:100vw;
+    overflow-x:hidden;
+    margin-bottom: 100px;
+    padding-top:30px;
+}
+.activities h2{
+    padding-bottom:30px;
+}
+.act-container{
+    display:block; 
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.act-container button{
+    width:20%;
+    height:56px;
+    background: #2A2F45;
+    border:none;
+    border-radius: 10px;
+    margin-bottom:40px;
+    margin-top:40px;
+}
+@media screen and (max-width:1000px){
+    .act-container button{
+        width:80vw;
+    }
+}
+.none{
+    background-color: transparent;
+}
+
+.act-item{
+    width:80vw;
+    border-radius:20px;
+    background-size: cover;
+    overflow:hidden;
+    margin:auto;
+}
+@media screen and (min-width:800px){
+    .act-item{
+        width:20vw;
+    }
+}
+.act-item img{
+    width:100%;
+}
+@media screen and (max-width:800px){
+    .act-item img{
+        width:80vw;
+    }
+}
+.act-full{
+    width:100%;
+    height:auto;
+    border:none;
+    background: linear-gradient(180.23deg, rgba(42, 47, 69, 0) 1.2%, #000 40.47%);
+}
+.Text{
+    height: 70%;
+    margin-top:30%;
+    padding-bottom:20px;
+}
+.Text p{
+    background-color: transparent;
+    padding-bottom:20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}

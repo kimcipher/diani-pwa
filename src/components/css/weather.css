@@ -1,0 +1,39 @@
+/* .weather{
+    border-radius: 35px;
+    overflow: hidden;
+    width:100px;
+    height:100px;
+    cursor:pointer;
+    position:absolute;
+    top:120px;
+    right:20px;
+}
+@media screen and (max-width:300px){
+    .weather{
+        top:80px
+    }
+}
+.weatherflex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: right;
+    text-align: right;
+}
+@media screen and (max-width:1000px){
+    .weatherflex{
+        left:10vw;
+    }
+}
+.weatherflex h3{
+    font-weight: bold;
+    padding-top:12px;
+}
+
+.close {
+    cursor: pointer;
+} */
+
+.weather{
+    margin-left:20px;
+}

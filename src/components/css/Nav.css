@@ -1,0 +1,118 @@
+.nav-main {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  background: #241845;
+}
+/* .nav-main a{
+  padding-top:30px;
+} */
+.Links-container {
+  display: flex;
+  flex-direction: row;
+  width: 40vw;
+  height: 100%;
+  background: #241845;
+  justify-content: space-between;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+a {
+  text-decoration:none;
+  text-align: center;
+}
+.Button-container {
+  color: navy;
+  background: linear-gradient(to right, #b2fefa, #0ed2f7);
+  border: none;
+  font-weight: 800;
+  width: 150px;
+  height: 44px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1em;
+}
+.Logo-container img {
+  background-color: #241845;
+}
+.Logo-container {
+  border-radius: 12px 12px 0px 0px;
+  background-color: #241845;
+}
+@media screen and (max-width: 1000px) {
+  .Links-container {
+    display: none;
+  }
+  .Button-container button {
+    width: 35vw;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .Logo-container img {
+    width: 35vw;
+  }
+  .nav-main {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: space-around;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+}
+.Button-container:hover {
+  background: #241845;
+  color: #fff;
+  font-weight: 800;
+  border: 1px solid #85f2fd;
+  border-radius: 8px;
+}
+.pwa-con {
+  position: fixed;
+  bottom: 20px;
+  width: 100%; 
+}
+.pwa-btn{
+  justify-content: space-around;
+  background-color: #241845;
+  max-width: 500px;
+  width:60%;
+  margin: auto;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 5px;
+}
+.pwa-btn h4{
+  color: #fff;
+}
+.pwa-btn button{
+  padding: 5px;
+  border-radius: 5px;
+  border:1px solid rgb(2, 8, 37);
+  color:#fff;
+  background-color: navy;
+  width:70px;
+  height: 40px;
+  font-weight: bold;
+}
+.date-time{
+  display:flex;
+  min-width: 140px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.time{
+  display:flex;
+  min-width: 60px;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: 10px;
+  margin-left:10px;
+}

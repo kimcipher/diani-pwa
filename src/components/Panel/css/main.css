@@ -1,0 +1,31 @@
+form{
+    width: 100%;
+    display: block;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+input{
+    width: 90vw;
+    margin:auto;
+    margin-bottom:25px;
+    background-color: rgb(255,255,255, 0.4);
+    border:none;
+    height:40px;
+    border-radius: 5px;
+    font-weight: bold;
+    color:#fff;
+}
+@media screen and (min-width:1000px){
+    input{
+        width:50vw;
+    }
+}
+button{
+    background-color: navy;
+    color: #fff;
+    border:none;
+    width:200px;
+    height: 40px;
+    border-radius:5px;
+    margin-top: 30px;
+}

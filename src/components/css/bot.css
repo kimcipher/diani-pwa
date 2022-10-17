@@ -1,0 +1,14 @@
+.bot-container{
+    position: fixed;
+    bottom:30px;
+    right:30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #241845 ;
+    align-items: center;
+    display:none;
+}
+.bot-container *{
+    padding: 15px;
+}

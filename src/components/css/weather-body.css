@@ -1,0 +1,31 @@
+
+.close{
+    position: fixed;
+    top:18vh;
+    left:2vw;
+    color:rgb(0, 0, 0);
+}
+/* @media screen and (max-width:1000px) {
+    .close{
+        position: absolute;
+        top:33%;
+        left:90%;
+        color:rgb(0, 0, 0);
+    }
+    close *{
+        font-size: 40px;
+    }
+} */
+.weather-main-container{
+    width:100%;
+    display: flex;
+    /* justify-content: center; */
+    position: fixed;
+    top:15vh;
+    left:0;
+    color:rgb(0, 0, 0);
+
+}
+/* .weather-component{
+    width:clamp(50vw);
+} */

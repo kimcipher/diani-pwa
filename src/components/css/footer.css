@@ -1,0 +1,72 @@
+* p {
+  color: #fff;
+  background: #241845;
+  font-size: 0.8em;
+  font-weight: 1px;
+padding-bottom:10px;
+}
+.how:hover{
+  color: #e268f3;
+  cursor: pointer;
+}
+.foot-container {
+  display: block;
+  flex-direction: row;
+  justify-content: space-around;
+  height: auto;
+  background: #020825;
+  width: 100vw;
+  padding-bottom: 50px;
+  margin-top: 20px;
+}
+.foot-container * {
+  background-color: #020825;
+}
+.foot-container p{
+  padding-bottom:20px;
+}
+.nav-mobile-container {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  background-color: #020825;
+  overflow-x: scroll;
+  width: 100vw;
+}
+.flex{
+  display:grid;
+}
+.nav-mobile-container * {
+  width: 30vw;
+  /* text-decoration:none; */
+  transition: 0.2s;
+}
+.nav-mobile-container::-webkit-scrollbar {
+  display: none;
+}
+.nav-mobile-container a{
+  padding-bottom: 20px;
+  border-bottom:2px solid white;
+  margin-left:20px;
+}
+.nav-mobile-container a:hover{
+  transition: 0.2s;
+  padding-top:20px;
+  border-bottom:2px solid #e268f3;
+}
+.nav-mobile-container .active{
+  transition: 0.2s;
+  padding-top:20px;
+  border-bottom:2px solid #e268f3;
+}
+h5:hover{
+  color:  #e268f3;
+}
+.active h5{
+  color:  #e268f3;
+}
+@media screen and (min-width: 1000px) {
+  .nav-mobile-container {
+    display: none;
+  }
+}
