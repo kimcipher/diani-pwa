@@ -2,7 +2,7 @@ const version = 6;
 const preCacheName = `static-${version}`;
 const preCache = ['/', '/index.html', '/404.html'];
 
-self.addEventListener('install', (ev) => {
+window.addEventListener('install', (ev) => {
   //installed
   ev.waitUntil(
     caches
@@ -16,7 +16,7 @@ self.addEventListener('install', (ev) => {
   //load pre-cache
 });
 
-self.addEventListener('activate', (ev) => {
+window.addEventListener('activate', (ev) => {
   //activating
   ev.waitUntil(
     caches
@@ -33,7 +33,7 @@ self.addEventListener('activate', (ev) => {
   //delete old caches
 });
 
-self.addEventListener('fetch', (ev) => {
+window.addEventListener('fetch', (ev) => {
   //fetch request received
   //send back a response from cache or fetch
   ev.respondWith(
@@ -60,7 +60,7 @@ self.addEventListener('fetch', (ev) => {
   );
 });
 
-self.addEventListener('message', (ev) => {
+window.addEventListener('message', (ev) => {
   //message received
   //do things based on message props
   let data = ev.data;
