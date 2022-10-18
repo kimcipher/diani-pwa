@@ -78,7 +78,7 @@ a {
 }
 .pwa-btn{
   justify-content: space-around;
-  background-color: #241845;
+  background-color: rgb(36, 24, 69, 0.7);
   max-width: 500px;
   width:60%;
   margin: auto;

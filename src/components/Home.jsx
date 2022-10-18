@@ -172,7 +172,7 @@ function Home() {
           >
             <div className="Tab-item">
             <div className="grid-left">{cryptobtnnew}</div>
-              <div className="grid-right"> Spend Crytpo</div>
+              <div className="grid-right"> Spend Crypto</div>
             </div>
           </ReactWhatsapp>
           <div className="shrink-container">

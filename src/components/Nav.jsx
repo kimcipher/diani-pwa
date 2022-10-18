@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import "./css/Nav.css";
 import logo from "./assets/logo.png";
 import toast from "react-hot-toast";
-import {addHome, reallogo, installation} from "./icons"
-import WeatherIcon from "../components/WeatherIcon"
-import {NavLink} from "react-router-dom"
+import { addHome, reallogo, installation } from "./icons";
+import WeatherIcon from "../components/WeatherIcon";
+import { NavLink } from "react-router-dom";
 import { usePwa } from "react-pwa-app";
 
 function Nav() {
@@ -12,13 +12,41 @@ function Nav() {
 
   console.log(pwa.registration); // ServiceWorkerRegistration
   const currentTime = new Date().toLocaleTimeString();
-  console.log("#######",pwa);
-  
-  return ( 
+  console.log("#######", pwa);
+
+
+
+  const Pwabtn =()=>{
+    if(pwa.isInstalled == "standalone"){
+      return null
+    } else {
+      return(
+        <>
+        <div className="pwa-con">
+          <div className="pwa-btn">
+            <div>
+              <h5>
+                Get the Diani App
+                <br />
+                ⭐⭐⭐⭐⭐
+              </h5>
+            </div>
+            <button onClick={pwa.install}>Install</button>
+          </div>
+        </div>
+        </>
+      )
+    }
+
+  }
+
+  return (
     <nav>
       <div className="nav-main">
         <div className="Logo-container">
-          <NavLink to="/"><img src={logo} alt="logo image"/></NavLink>
+          <NavLink to="/">
+            <img src={logo} alt="logo image" />
+          </NavLink>
         </div>
         <div className="Links-container">
           <NavLink to="/">
@@ -33,27 +61,19 @@ function Nav() {
           {/* <NavLink to="/Tours">
             <h5>Tours</h5>
           </NavLink> */}
-          
+
           <NavLink to="/NightLife">
             <h5>Night Life</h5>
           </NavLink>
           <NavLink to="/VIP">
             <h5>VIP</h5>
           </NavLink>
-          
         </div>
         {/* <h4><WalletConnect/></h4> */}
-        <div className="pwa-con">
-        {/* {pwa.isInstalled?( */}
-            <div className="pwa-btn">
-            <div><h5>Get the Diani App<br/>⭐⭐⭐⭐⭐</h5></div> <button onClick={pwa.install}>Install</button>
-            </div>
-        {/* ): null} */}
-        
-        {/* {supportsPWA ? (  */}
-          
-            {/* ) : null} */}
-        </div>
+        <Pwabtn/>
+        {/* {pwa.isInstalled =="none" ? (  */}
+
+          {/* ) : null} */}
       </div>
     </nav>
   );

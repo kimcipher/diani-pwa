@@ -40,20 +40,20 @@ function App() {
   }
   
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-     setIsOpen(true)  
-    }, [5000]);
-    // I will be deleted while component is unmounting.
-    return () => clearTimeout(timer) 
-    }, []);
-    useEffect(() => {
-      const timer = setTimeout(() => {
-       setIsOpen(false)  
-      }, [20000]);
-      // I will be deleted while component is unmounting.
-      return () => clearTimeout(timer) 
-      }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //    setIsOpen(true)  
+  //   }, [5000]);
+  //   // I will be deleted while component is unmounting.
+  //   return () => clearTimeout(timer) 
+  //   }, []);
+  //   useEffect(() => {
+  //     const timer = setTimeout(() => {
+  //      setIsOpen(false)  
+  //     }, [20000]);
+  //     // I will be deleted while component is unmounting.
+  //     return () => clearTimeout(timer) 
+  //     }, []);
 
 
   return (
@@ -71,7 +71,7 @@ function App() {
       <AddToHomeScreen />
       <Type />
       {/* <WeatherIcon /> */}
-      {isOpen && <Popup setIsOpen={setIsOpen}/>}
+      {/* {isOpen && <Popup setIsOpen={setIsOpen}/>} */}
       <MobileNav />
       <BotIcon/>
       <Routes>
