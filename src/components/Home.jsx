@@ -194,7 +194,7 @@ function Home() {
             >
               <div className="bg">
               <div className="shrink">{receivecrypto}</div>
-                <div className="shrink"> Receive Crytpo</div>
+                <div className="shrink"> Receive Crypto</div>
               </div>
             </ReactWhatsapp>
           </div>

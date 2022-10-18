@@ -23,9 +23,11 @@ import Lalo from "./components/Lalo"
 import "@fontsource/montserrat"; // Defaults to weight 400.
 import WalletConnector from "./components/WalletConnector"
 import Preloader from "./components/PreLoad/Preloader";
+import {useCookies} from 'react-cookie';
 
 
 function App() {
+  const [cookies, setCookie, removeCookie] = useCookies(['cookie-name']);
   const [itIsOpen, setItIsOpen]= useState(false)
   // eslint-disable-next-line no-unused-vars
   const [isOpen, setIsOpen] = useState(false)

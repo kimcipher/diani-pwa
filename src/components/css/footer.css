@@ -18,9 +18,9 @@
   padding-bottom: 50px;
   margin-top: 20px;
 }
-.foot-container * {
+/* .foot-container * {
   background-color: #020825;
-}
+} */
 .foot-container p{
   padding-bottom:20px;
 }
@@ -68,4 +68,26 @@ h5:hover{
   .nav-mobile-container {
     display: none;
   }
+}
+.wrap-how{
+  background-color: navy;
+  max-width: 200px;
+  margin:auto;
+  height:auto;
+  padding:10px;
+  border-radius: 20px;
+  cursor:pointer;
+  transition: 0.2s;
+}
+.wrap-how:hover{
+  max-width: 250px;
+  padding:15px;
+  transition: 0.2s;
+}
+.wrap-how h4 a{
+  background-color: transparent;
+  margin-top: 0;
+}
+.wrap-how h4{
+  padding-top: 0;
 }
