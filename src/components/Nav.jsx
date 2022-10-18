@@ -22,7 +22,18 @@ function Nav() {
     } else {
       return(
         <>
-        
+        <div className="pwa-con">
+          <div className="pwa-btn">
+            <div>
+              <h5>
+                Get the Diani App
+                <br />
+                ⭐⭐⭐⭐⭐
+              </h5>
+            </div>
+            <button onClick={pwa.install}>Install</button>
+          </div>
+        </div>
         </>
       )
     }
@@ -59,18 +70,7 @@ function Nav() {
           </NavLink>
         </div>
         {/* <h4><WalletConnect/></h4> */}
-        <div className="pwa-con">
-          <div className="pwa-btn">
-            <div>
-              <h5>
-                Get the Diani App
-                <br />
-                ⭐⭐⭐⭐⭐
-              </h5>
-            </div>
-            <button onClick={pwa.install}>Install</button>
-          </div>
-        </div>
+        <Pwabtn/>
         {/* {pwa.isInstalled =="none" ? (  */}
 
           {/* ) : null} */}
