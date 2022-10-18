@@ -12,6 +12,9 @@ import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 import reportWebVitals from './reportWebVitals';
 import ReactPwa from "react-pwa-app";
+import { ClearBrowserCacheBoundary } from 'react-clear-browser-cache';
+
+
 
 const { chains, provider, webSocketProvider } = configureChains(
   [
@@ -41,6 +44,32 @@ const wagmiClient = createClient({
   webSocketProvider,
 });
 
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    // Update state so the next render will show the fallback UI.
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    // You can also log the error to an error reporting service
+    console.log(error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      // You can render any custom fallback UI
+      return <h1>Something went wrong.</h1>;
+    }
+
+    return this.props.children; 
+  }
+}
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -75,7 +104,11 @@ root.render(
       },
     }}
   >
-          <App /><PWAPrompt promptOnVisit={2} timesToShow={300} copyClosePrompt="Close" permanentlyHideOnDismiss={false} delay={1000}/>
+          <ErrorBoundary>
+            <ClearBrowserCacheBoundary>
+              <App /><PWAPrompt promptOnVisit={2} timesToShow={300} copyClosePrompt="Close" permanentlyHideOnDismiss={false} delay={1000}/>
+            </ClearBrowserCacheBoundary>
+          </ErrorBoundary>
           </ReactPwa>
         </RainbowKitProvider>
       </WagmiConfig>
