@@ -14,7 +14,8 @@ import {
   bookings,
   shopping,
   livecon,
-  lalologo
+  lalologo,
+  kulosa
 } from "./icons";
 import "./css/Lalo.css";
 import { Carousel } from "react-responsive-carousel";
@@ -31,7 +32,7 @@ const bookings_idx = hour + (hour*5)
   return (
     <div className="Lalo-main">
       <div className="child-closer" onClick={() => props.setItIsOpen(false)}>
-        <div className="closest">+</div>
+        <div className="closest">{kulosa}</div>
       </div>
       <Carousel>
         <div>
