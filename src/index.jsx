@@ -76,7 +76,7 @@ root.render(
     }}
   >
           <App /><PWAPrompt promptOnVisit={2} timesToShow={300} copyClosePrompt="Close" permanentlyHideOnDismiss={false} delay={5000}/>
-          </ReactPwa>,
+          </ReactPwa>
         </RainbowKitProvider>
       </WagmiConfig>
     </React.StrictMode>

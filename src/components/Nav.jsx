@@ -44,11 +44,11 @@ function Nav() {
         </div>
         {/* <h4><WalletConnect/></h4> */}
         <div className="pwa-con">
-        {pwa.isInstalled?(
+        {/* {pwa.isInstalled?( */}
             <div className="pwa-btn">
             <div><h5>Get the Diani App<br/>⭐⭐⭐⭐⭐</h5></div> <button onClick={pwa.install}>Install</button>
             </div>
-        ): null}
+        {/* ): null} */}
         
         {/* {supportsPWA ? (  */}
           
