@@ -18,7 +18,7 @@ import "animate.css/animate.min.css";
 import DefaultNav from "./components/DefaultNav";
 // import {AnimationOnScroll} from "react-animation-on-scroll"
 import Popup from "./components/Popup"
-import {Toaster}  from  "react-hot-toast"
+// import {Toaster}  from  "react-hot-toast"
 // import Marquee from "./components/Marquee";
 import Lalo from "./components/Lalo"
 import "@fontsource/montserrat"; // Defaults to weight 400.
@@ -74,7 +74,7 @@ function App() {
       <Preloader/>
     ):(
       <>
-        <Toaster
+        {/* <Toaster
         position="top-center"
         reverseOrder={false}
         gutter={8}
@@ -89,7 +89,7 @@ function App() {
             color: "#fff",
           },
         }}
-      />
+      /> */}
       <WalletConnector/>
       <DefaultNav/>
       <Nav />
