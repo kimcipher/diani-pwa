@@ -39,7 +39,7 @@ const bookings_idx = hour + (hour*5)
           <div className="child" style={{ marginTop: "20px" }}>
             <p style={{textTransform:"uppercase", fontSize:"0.7em"}}>
               {lalologo}<br/>
-              LALO COMMUNITIES is AN ALWAYS ON
+              LALO COMMUNITIES is AN ALWAYS ON &nsbp;
               <br /> 24/7 INSTANT WEB3 BOOKING DAPP
               <br /> powering small communities & THEIR <br /> VISITORS 🌎.
               <br />
