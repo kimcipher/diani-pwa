@@ -183,3 +183,7 @@ h4 {
   background-color: transparent;
   border:none;
 }
+.pxl svg{
+  width:30px;
+  height:30px;
+}

@@ -96,11 +96,11 @@ function Home() {
               className="whatsapp"
             >
           <div className="Tab-item" style={{display:"flex", justifyContent:"space-around"}}>
-            <div className="flex-car-item">Scooter<br/>{scooter}</div>  
-            <div className="flex-car-item">E-Bikes<br/>{bike}</div> 
+            <div className="flex-car-item pxl">Scooter<br/>{scooter}</div>  
+            <div className="flex-car-item pxl">E-Bikes<br/>{bike}</div> 
             <div className="flex-car-item">{renta}</div> 
-            <div className="flex-car-item">Car/Taxi<br/>{taxi}</div> 
-            <div className="flex-car-item">Boat<br/>{boat}</div>    
+            <div className="flex-car-item pxl">Car/Taxi<br/>{taxi}</div> 
+            <div className="flex-car-item pxl">Boat<br/>{boat}</div>    
           </div>
         </ReactWhatsapp>
         {/* {scooter}&nbsp; {bikesmall}&nbsp;&nbsp; {taxi}&nbsp; */}
@@ -111,9 +111,9 @@ function Home() {
               className="whatsapp"
             >
           <div className="Tab-item" style={{display:"flex", justifyContent:"space-around"}}>
-            <div className="" ><p style={{background:"none"}}>{packageicon}<br/>Parcel <br/> Delivery </p></div> 
-            <div className="" ><p style={{background:"none"}}>Hire <br/>{geek} <br/>Tech Guru</p></div> 
-            <div className="" ><p style={{background:"none"}}>Hire <br/>{fix}<br/> Repair/FixIT</p></div> 
+            <div className="pxl" ><p style={{background:"none"}}>{packageicon}<br/>Parcel <br/> Delivery </p></div> 
+            <div className="pxl" ><p style={{background:"none"}}>{geek}<br/>Hire<br/>Tech Guru</p></div> 
+            <div className="pxl" ><p style={{background:"none"}}>{fix}<br/>Hire<br/>Repair/FixIT</p></div> 
             {/* <div className="scooter"><p style={{background:"none"}}>Guru<br/>{geek}</p><p style={{background:"none"}}>Repair <br/>{fix}</p></div>      */}
           </div>
         </ReactWhatsapp>
@@ -207,11 +207,11 @@ function Home() {
             className="whatsapp"
           >
             <div className="Tab-item" style={{display:"flex", justifyContent:"space-around"}}>
-              <div className="flex-car-item">{dress}</div> 
-              <div className="flex-car-item">{tshirt}</div> 
-              <div className="flex-car-item">{shoe}</div> 
-              <div className="flex-car-item">{flippers}</div>
-              <div className="flex-car-item" style={{marginTop:"0", width:"95px"}}>Buy now Delivered Now</div>  
+              <div className="flex-car-item pxl">{dress}</div> 
+              <div className="flex-car-item pxl">{tshirt}</div> 
+              <div className="flex-car-item pxl">{shoe}</div> 
+              <div className="flex-car-item pxl">{flippers}</div>
+              <div className="flex-car-item pxl" style={{marginTop:"0", width:"95px"}}>Buy now Delivered Now</div>  
           
             </div>
           </ReactWhatsapp>
@@ -222,11 +222,11 @@ function Home() {
             className="whatsapp"
           >
             <div className="Tab-item" style={{display:"flex", justifyContent:"space-around"}}>
-              <div className="flex-car-item">{phone}</div> 
-              <div className="flex-car-item">{camera}</div> 
-              <div className="flex-car-item">{battery}</div> 
-              <div className="flex-car-item">{laptop}</div> 
-              <div className="flex-car-item" style={{marginTop:"0", width:"95px"}}>Tech Gadgets</div>  
+              <div className="flex-car-item pxl">{phone}</div> 
+              <div className="flex-car-item pxl">{camera}</div> 
+              <div className="flex-car-item pxl">{battery}</div> 
+              <div className="flex-car-item pxl">{laptop}</div> 
+              <div className="flex-car-item pxl" style={{marginTop:"0", width:"95px"}}>Tech Gadgets</div>  
             </div>
           </ReactWhatsapp>
 
