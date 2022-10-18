@@ -1,7 +1,7 @@
 {
-  "short_name": "Diani App",
-  "name": "One Tap, One App",
-  "description": "Get anything delivered",
+  "short_name": "DianiApp",
+  "name": "DianiApp",
+  "description": "One Tap One App",
   "theme_color": "#f69435",
   "background_color": "#f69435",
   "orientation": "portrait",
