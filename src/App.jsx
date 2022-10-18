@@ -19,12 +19,10 @@ import DefaultNav from "./components/DefaultNav";
 // import {AnimationOnScroll} from "react-animation-on-scroll"
 import Popup from "./components/Popup"
 // import {Toaster}  from  "react-hot-toast"
-// import Marquee from "./components/Marquee";
 import Lalo from "./components/Lalo"
 import "@fontsource/montserrat"; // Defaults to weight 400.
 import WalletConnector from "./components/WalletConnector"
 import Preloader from "./components/PreLoad/Preloader";
-// import {ConnectButton} from "@rainbow-me/rainbowkit"
 
 
 function App() {
@@ -58,14 +56,6 @@ function App() {
       }, []);
 
 
-      // useEffect(() => {
-      //   const timer = setTimeout(() => {
-      //    setItIsOpen(true)  
-      //   }, [5000]);
-      //   // I will be deleted while component is unmounting.
-      //   return () => clearTimeout(timer) 
-      //   }, []);
-
   return (
     <>
     {/* <ConnectButton/> */}
@@ -74,22 +64,6 @@ function App() {
       <Preloader/>
     ):(
       <>
-        {/* <Toaster
-        position="top-center"
-        reverseOrder={false}
-        gutter={8}
-        containerClassName=""
-        containerStyle={{}}
-        toastOptions={{
-          // Define default options
-          className: "installation-toaster",
-          duration: 5000,
-          style: {
-            background: "#000",
-            color: "#fff",
-          },
-        }}
-      /> */}
       <WalletConnector/>
       <DefaultNav/>
       <Nav />
@@ -110,7 +84,6 @@ function App() {
         <Route path="/Activities" element={<Activities />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/rate-us" element={<Rating />} />
-        {/* <Route path="/services/new" element={<NewService />} /> */}
       </Routes>
       <MobileFooter setItIsOpen={setPopupOpen} />
     </>
