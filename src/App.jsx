@@ -21,10 +21,9 @@ import Popup from "./components/Popup"
 // import {Toaster}  from  "react-hot-toast"
 import Lalo from "./components/Lalo"
 import "@fontsource/montserrat"; // Defaults to weight 400.
-import WalletConnector from "./components/WalletConnector"
+import InterractiveSection from "./components/WalletConnector.jsx";
 import Preloader from "./components/PreLoad/Preloader";
 import {useCookies} from 'react-cookie';
-
 
 function App() {
   const [cookies, setCookie, removeCookie] = useCookies(['cookie-name']);
@@ -66,7 +65,7 @@ function App() {
       <Preloader/>
     ):(
       <>
-      <WalletConnector/>
+      <InterractiveSection/>
       <DefaultNav/>
       <Nav />
       {/* <Marquee/> */}

@@ -18,16 +18,22 @@ import reportWebVitals from "./reportWebVitals";
 import ReactPwa from "react-pwa-app";
 import { ClearBrowserCacheBoundary } from "react-clear-browser-cache";
 import {CookiesProvider} from "react-cookie"
+import { Web3ReactProvider } from '@web3-react/core'
+import { Web3Provider } from "@ethersproject/providers";
+
+function getLibrary(provider){
+  return new Web3Provider(provider);
+}
 
 const { chains, provider, webSocketProvider } = configureChains(
   [
     chain.mainnet,
-    chain.polygon,
-    chain.optimism,
-    chain.arbitrum,
-    ...(process.env.REACT_APP_ENABLE_TESTNETS === "true"
-      ? [chain.goerli, chain.kovan, chain.rinkeby, chain.ropsten]
-      : []),
+    // chain.polygon,
+    // chain.optimism,
+    // chain.arbitrum,
+    // ...(process.env.REACT_APP_ENABLE_TESTNETS === "true"
+    //   ? [chain.goerli, chain.kovan, chain.rinkeby, chain.ropsten]
+    //   : []),
   ],
   [
     alchemyProvider({ apiKey: "_gg7wSSi0KMBsdKnGVfHDueq6xMB9EkC" }),
@@ -108,7 +114,9 @@ root.render(
             <ErrorBoundary>
               <ClearBrowserCacheBoundary>
                 <CookiesProvider>
-                  <App />
+                  <Web3ReactProvider getLibrary={getLibrary}>
+                    <App />
+                  </Web3ReactProvider>
                 </CookiesProvider>
                 <PWAPrompt
                   promptOnVisit={2}

@@ -39,7 +39,7 @@ function Activities() {
             return(
                 <div>
                     <div className="act-item">
-                        <img src={image} alt={item.name}/>
+                        <img src={image} alt={item.name} loading="lazy"/>
                     </div>
                     <ReactWhatsapp
                         key={index}

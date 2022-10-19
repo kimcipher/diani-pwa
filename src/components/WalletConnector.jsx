@@ -15,8 +15,31 @@ import ReactWhatsapp from "react-whatsapp";
 import { Tab, Tabs, TabPanel, TabList } from "react-tabs";
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 
-const WalletConnector = () => {
+// import { WalletLinkConnector } from "@web3-react/walletlink-connector";
+// import {WalletConnectConnector} from '@web3-react/walletconnect-connector';
+// import {InjectedConnector} from '@web3-react/injected-connector';
+// import { useWeb3React } from '@web3-react/core'
+
+// const CoinbaseWallet = new WalletLinkConnector({
+//  url: `https://mainnet.infura.io/v3/5ef8165ab6174ab980c609a75024165b`,
+//  appName: "Web3-react Demo",
+//  supportedChainIds: [1, 3, 4, 5, 42],
+// });
+
+// const WalletConnect = new WalletConnectConnector({
+//  rpcUrl: `https://mainnet.infura.io/v3/5ef8165ab6174ab980c609a75024165b`,
+//  bridge: "https://bridge.walletconnect.org",
+//  qrcode: true,
+// });
+
+// const Injected = new InjectedConnector({
+//  supportedChainIds: [1, 3, 4, 5, 42]
+// });
+
+
+const InterractiveSection = () => {
   const [open, setOpen] = useState(false);
+  // const { activate, deactivate } = useWeb3React();
   const handleClick = () => {
     setOpen(!open);
   };
@@ -48,8 +71,11 @@ const WalletConnector = () => {
                 </div>
               </TabPanel>
               <TabPanel className="transition" style={{ justifyContent: "center"}} >
-                <div style={{marginTop:"70px"}}>
-                  <ConnectButton/> 
+                <div style={{marginTop:"70px", display:"flex", flexDirection:"row"}}>
+                  <ConnectButton/>
+                  {/* <button onClick={() => { activate(CoinbaseWallet) }} style={{color:"#fff", background:"navy", padding:'10px',borderRadius:"5px"}}>Coinbase Wallet</button>
+                  <button onClick={() => { activate(WalletConnect) }} style={{color:"#fff", background:"navy", padding:'10px',borderRadius:"5px"}}>Wallet Connect</button> */}
+                  {/* <button onClick={() => { activate(Injected) }} style={{color:"#fff", background:"navy", padding:'10px',borderRadius:"5px"}}>Metamask</button> */}
                 </div>
               </TabPanel>
               <TabPanel className="transition">
@@ -77,17 +103,9 @@ const WalletConnector = () => {
           </div>
         ) : // </Popup>
         null}
-
-        {/* <div className="main-connect">
-            {!currentAccount &&,  (
-            <div className="main-icon" onClick={connectWallet}>
-              {walletconnecticon}
-            </div>
-             )}
-        </div> */}
       </div>
     </>
   );
 };
 
-export default WalletConnector;
+export default InterractiveSection;
