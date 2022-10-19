@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./css/footer.css";
 import Nai from "./assets/nAIROBI-ART.png";
-import Logo from "./assets/logosmall.png";
+import Logo from "./assets/logo.png";
 import {NavLink} from "react-router-dom"
 import {
   amazon,
@@ -22,6 +22,7 @@ const MobileFooter = ({ setItIsOpen }) => {
   };
   return (
     <div className="foot-container">
+      <br/><br/><br/>
       <NavLink to="/how-it-works" className="how">
         <div className="wrap-how">
           <h4>
@@ -29,23 +30,24 @@ const MobileFooter = ({ setItIsOpen }) => {
           </h4>
         </div>
       </NavLink>
+      <br/><br/><br/>
       {/* <p>
         <WalletConnect />
       </p> */}
 
         <br />
         <br />
-        <img src={Logo} alt="logo" height={"25px"} /> <br />
+        <img src={Logo} alt="logo" height={"85px"} />
         <p
           
-          style={{ color: "#fff", marginBottom:"-35px", marginLeft:"15%", marginRight:"15%", lineHeight:"20px"}}
+          style={{ color: "#fff", marginBottom:"-35px", marginLeft:"15%", marginRight:"15%", lineHeight:"15px"}}
         >
           {" "}
           DianiApp &trade; is a partner-based dApp Within &nbsp;
           <span style={{ textTransform: "uppercase", color: "#ff99ff", cursor:"pointer" }} onClick={clicked}>
             LaLo Communitites &nbsp;
           </span>
-          ecosystem. LaLo Communities is a Web3+Blockchain powered Bookings & Deliveries dApp for Anything. Anytime. <br/><br/><br/>A mashup of .... <br/><br/><br/>
+          ecosystem. LaLo Communities is a Web3+Blockchain powered Bookings & Deliveries dApp for Anything. Anytime. <br/><br/> A mashup of .... <br/><br/>
         </p>
         <br /> 
 
@@ -54,10 +56,10 @@ const MobileFooter = ({ setItIsOpen }) => {
         {amazon} &nbsp; &nbsp; {uber} &nbsp; &nbsp;
         {bookingcom}&nbsp; &nbsp; {justEat}
       </p>
-      <p style={{ marginBottom: "0", }}>{jumialogo}</p><br/><br/>
+      <p style={{ marginBottom: "0", }}>{jumialogo}</p>
 
-      <p >Serving small communities </p>
-      <h4 style={{marginTop:"-15px"}}>🌎</h4><p>TRY US !</p>
+      <p >Serving small communities globally</p>
+      <h4 style={{marginTop:"-15px"}}>🌎</h4><p>TRY US !</p><br/><br/>
       <p>
         <img
           src={Nai}
@@ -65,7 +67,7 @@ const MobileFooter = ({ setItIsOpen }) => {
           width="185px"
           style={{ marginBottom: "-10px" }}
         />
-      </p>
+      </p><br/>
 
       <p>&copy; {currentDate} DianiApp. All Rights Reserved</p><br/><br/><br/><br/>
     </div>
