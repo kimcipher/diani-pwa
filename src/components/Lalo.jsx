@@ -133,53 +133,51 @@ const bookings_idx = hour + (hour*5)
               <div className="child-container-child-spec">
                 <h3 style={{fontSize:"0.9em"}}>EAST AFRICA</h3>
                 {/* <p> &nbsp; &nbsp; {livecon}&nbsp; &nbsp; KENYA</p> */}
-                <Collapsible trigger="◎ KE 🇰🇪 +" className="collapsible">
+                <details className="collapsible">
+                  <summary>KE 🇰🇪 </summary>
                   <p>&nbsp; &nbsp; &nbsp; &nbsp;Diani</p>
                   <p>&nbsp; &nbsp; &nbsp; &nbsp;Kilifi</p>
                   <p>&nbsp; &nbsp; &nbsp; &nbsp;Watamu</p>
                   <p>&nbsp; &nbsp; &nbsp; &nbsp;Malindi</p>
-                </Collapsible>
-                <Collapsible trigger="◎ UG 🇺🇬 +" className="collapsible">
-                  <p>&nbsp; &nbsp; &nbsp; &nbsp;Jinja</p>
-                </Collapsible>
-
-                <Collapsible trigger="◎ TZ 🇹🇿 +" className="collapsible">
-                  <p>&nbsp; &nbsp; &nbsp; &nbsp;Zanzibar</p>
-                </Collapsible>
+                </details>
+                <details className="collapsible">
+                    <summary>UG 🇺🇬 </summary>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp;Jinja</p>
+                </details>
+                <details className="collapsible">
+                  <summary>TZ 🇹🇿 </summary>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp;Zanzibar</p>
+                </details>
               </div>
               <div className="child-container-child-spec">
                 <h3 style={{fontSize:"0.9em"}}>CARRIBEAN</h3>
-                <Collapsible trigger="◎ BAMA 🇧🇸 +" className="collapsible">
+                <details className="collapsible">
+                  <summary>BAMA 🇧🇸</summary>
                   <p>&nbsp; &nbsp; &nbsp; &nbsp;Goombay</p>
-                </Collapsible>
-                <Collapsible trigger="◎ BM 🇧🇲 +" className="collapsible">
-                  {/* <p>&nbsp; &nbsp; &nbsp; &nbsp;JINJER</p>
-                  <p>&nbsp; &nbsp; &nbsp; &nbsp;Kilifi</p> */}
-                </Collapsible>
+                </details>
+                <details className="collapsible">
+                  <summary>BM 🇧🇲 </summary>
+                </details>
               </div>
               <div className="child-container-child-spec">
                 <h3 style={{fontSize:"0.9em"}}>AMERICAS</h3>
                 <p className="small" style={{fontSize:"0.5em", textAlign:"center", marginBottom:"0"}}> &nbsp; &nbsp; (coming soon)</p>
-                <Collapsible
-                  trigger="◎ CR 🇨🇷 +"
-                  className="collapsible"
-                ></Collapsible>
-                <Collapsible
-                  trigger="◎ ELSL 🇸🇻 +"
-                  className="collapsible"
-                ></Collapsible>
+                  <details className="collapsible">
+                    <summary>CR 🇨🇷</summary>
+                  </details>
+                  <details className="collapsible">
+                    <summary>ELSL 🇸🇻</summary>
+                  </details>
               </div>
               <div className="child-container-child-spec">
                 <h3 style={{fontSize:"0.9em"}}>ASIA</h3>
                 <p className="small" style={{fontSize:"0.5em", textAlign:"center", marginBottom:"0" }}> &nbsp; &nbsp; (coming soon)</p>
-                <Collapsible
-                  trigger="◎ IDN 🇮🇩 +"
-                  className="collapsible"
-                ></Collapsible>
-                <Collapsible
-                  trigger="◎ TH 🇹🇭 +"
-                  className="collapsible"
-                ></Collapsible>
+                <details className="collapsible">
+                    <summary>IDN 🇮🇩</summary>
+                  </details>
+                  <details className="collapsible">
+                    <summary>TH 🇹🇭</summary>
+                  </details>
               </div>
             </div>
           </div>

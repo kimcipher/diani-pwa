@@ -18,6 +18,9 @@
     text-align:left ;
     line-height: 20px;
 }
+.Lalo-main .collapsible p{
+    line-height: 10px;
+}
 .closest{
     color:#fff;
     font-size: 2em;

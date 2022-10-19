@@ -5,7 +5,7 @@ export const Modal = (props) => {
     <div className="modal">
       <div className="modal-center">
         <div className="modal-header">
-          <h2>{props.title ? props.title : `Modal heading`}</h2>
+          <h2>Pay with crypto</h2>
           <button onClick={() => props.onClose()}>X</button>
         </div>
 

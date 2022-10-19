@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./css/footer.css";
 import Nai from "./assets/nAIROBI-ART.png";
 import Logo from "./assets/logosmall.png";
+import {NavLink} from "react-router-dom"
 import {
   amazon,
   uber,
@@ -21,13 +22,13 @@ const MobileFooter = ({ setItIsOpen }) => {
   };
   return (
     <div className="foot-container">
-      <a href="/how-it-works" className="how">
+      <NavLink to="/how-it-works" className="how">
         <div className="wrap-how">
           <h4>
             HOW IT WORKS❓
           </h4>
         </div>
-      </a>
+      </NavLink>
       {/* <p>
         <WalletConnect />
       </p> */}
