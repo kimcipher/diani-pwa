@@ -26,8 +26,6 @@ function Nav() {
           <div className="pwa-btn">
             <div>
               <h5>
-                Get the Diani App
-                <br />
                 ⭐⭐⭐⭐⭐
               </h5>
             </div>

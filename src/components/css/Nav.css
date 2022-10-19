@@ -78,8 +78,8 @@ a {
 }
 .pwa-btn{
   justify-content: space-around;
-  background-color: rgb(36, 24, 69, 0.7);
-  max-width: 500px;
+  background-color: #241845;
+  max-width: 300px;
   width:60%;
   margin: auto;
   border-radius: 5px;
@@ -93,9 +93,9 @@ a {
 .pwa-btn button{
   padding: 5px;
   border-radius: 5px;
-  border:1px solid rgb(2, 8, 37);
+  border:1px solid #A9ADC0;
   color:#fff;
-  background-color: navy;
+  background-color: #2D275B;
   width:70px;
   height: 40px;
   font-weight: bold;

@@ -70,18 +70,18 @@ h5:hover{
   }
 }
 .wrap-how{
-  background-color: navy;
+  background-color: #192347;
   max-width: 200px;
   margin:auto;
   height:auto;
   padding:10px;
-  border-radius: 20px;
+  border-radius: 5px;
   cursor:pointer;
   transition: 0.2s;
 }
 .wrap-how:hover{
-  max-width: 250px;
-  padding:15px;
+  max-width: 210px;
+  padding:5px;
   transition: 0.2s;
 }
 .wrap-how h4 a{
