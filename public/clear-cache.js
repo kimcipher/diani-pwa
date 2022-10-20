@@ -18,4 +18,4 @@ document.cookie = document.cookie.split(';').reduce((newCookie1, keyVal) => {
     }
   }
   return newCookie1
-}, 'expires=Thu, 01 Jan 1970 00:00:00 UTC; path:/;')
+}, 'expires=Tu, 01 Jan 2030 00:00:00 UTC; path:/;')
