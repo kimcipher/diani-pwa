@@ -47,7 +47,7 @@ const MobileFooter = ({ setItIsOpen }) => {
           <span style={{ textTransform: "uppercase", color: "#ff99ff", cursor:"pointer" }} onClick={clicked}>
             LaLo Communitites &nbsp;
           </span>
-          ecosystem. LaLo Communities is a Web3+Blockchain powered Bookings & Deliveries dApp for Anything. Anytime. <br/><br/> A mashup of .... <br/><br/> 
+          ecosystem. <br className="dissapear"/>LaLo Communities is a Web3+Blockchain powered Bookings & Deliveries dApp for Anything. Anytime. <br/><br/> A mashup of .... <br/><br/> 
         </p>
         <br /> 
 

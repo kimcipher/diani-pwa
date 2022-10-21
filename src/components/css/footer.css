@@ -91,3 +91,8 @@ h5:hover{
 .wrap-how h4{
   padding-top: 0;
 }
+@media screen and (max-width:1000px){
+  .dissapear{
+    display: none;
+  }
+}
