@@ -1,6 +1,7 @@
 .Lalo-main{
     position: fixed;
-    top:25vh;
+    top:20vh;
+    min-height:auto;
     margin:auto;
     background-color:#1B254A;
     height:auto;
@@ -8,15 +9,18 @@
     left:5vw;
     border-radius:20px;
     display:block;
-    padding:5vw;
+    padding:4%;
     transition:all 1s ease-in-out;
+}
+.carousel-root{
+    height:60vh;
 }
 .Lalo-main p{
     background-color: transparent;
     font-weight:bold;
     font-size:0.8em;
     text-align:left ;
-    line-height: 20px;
+    line-height:15px;
 }
 .Lalo-main .collapsible p{
     line-height: 10px;
@@ -91,7 +95,7 @@
 }
 .child-closer{
     position:absolute;
-    left:10%;
+    right:10%;
     width:40px;
     height:40px;
     cursor: pointer;
@@ -121,4 +125,23 @@ longest  */
 
 .small{
     font-size: 5px;
+}
+.descriptor{
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.descriptor svg{
+    width:20px;
+    height:20px;
+    margin-right:10px;
+}
+.carry{
+    height:auto;
+}
+.Lalo-main h6{
+    font-size: 10px;
+    text-align: left;
+    font-weight: normal;
 }
