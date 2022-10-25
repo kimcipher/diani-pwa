@@ -13,6 +13,7 @@ import {
   tickItem,
   starhundred,
   stareighty,
+  webtatu
 } from "./icons";
 import "./css/Lalo.css";
 import { Carousel } from "react-responsive-carousel";
@@ -98,7 +99,7 @@ const Lalo = (props) => {
               {starhundred}
             </div>
             <div style={{ display: "flex", flexDirection: "row", justifyContent:"space-around", width:"auto", margin:"auto", marginTop:"30px" }}>
-              <img src={webthree} style={{width:"50px"}}/>
+              <div>{webtatu}<br/> Web3</div>
               <img src={UDL} style={{width:"150px"}}/>
               <img src={PWA} style={{width:"50px"}}/>
             </div>
