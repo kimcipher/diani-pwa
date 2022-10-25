@@ -47,7 +47,7 @@ function Nav() {
           </NavLink>
         </div>
         <div className="Links-container">
-          <NavLink to="/">
+          <NavLink to="/popular">
             <h5>⭐ Popular</h5>
           </NavLink>
           <NavLink to="/Wellness">
