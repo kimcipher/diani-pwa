@@ -99,7 +99,7 @@ const Lalo = (props) => {
               {starhundred}
             </div>
             <div style={{ display: "flex", flexDirection: "row", justifyContent:"space-around", width:"auto", margin:"auto", marginTop:"30px" }}>
-              <div>{webtatu}<br/> Web3</div>
+              <div>{webtatu}<br/> <h5>Web3</h5></div>
               <img src={UDL} style={{width:"150px"}}/>
               <img src={PWA} style={{width:"50px"}}/>
             </div>
