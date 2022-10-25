@@ -68,8 +68,8 @@ const Lalo = (props) => {
           <div style={{display:"block"}}>
           <div className="descriptor">
             {tickItem}
-            <h6>PWA, install it to your phone
-            PWA, install it to your phone
+            <h6>PWA, install it to your  as an app
+      
             </h6>
           </div>
           <div className="descriptor">
