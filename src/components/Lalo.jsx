@@ -20,7 +20,7 @@ import { Carousel } from "react-responsive-carousel";
 import Collapsible from "react-collapsible";
 import PWA from "./assets/PWA.png"
 import UDL from "./assets/udl.png"
-import webthree from "./assets/Web3.png"
+import Mini from "./assets/minidianipp.png"
 
 const Lalo = (props) => {
   const d = new Date();
@@ -32,6 +32,7 @@ const Lalo = (props) => {
   // }
   return (
     <div className="Lalo-main">
+      
       <div className="child-closer" onClick={() => props.setItIsOpen(false)}>
         <div className="closest">{kulosa}</div>
       </div>
@@ -42,6 +43,9 @@ const Lalo = (props) => {
       showStatus={false}
       >
         <div>
+          <div className="unknown">
+            <img className="unknown-image" src={Mini} alt="Mini Diani App"/>
+          </div>
           <div
             style={{
               display: "flex",
@@ -66,11 +70,10 @@ const Lalo = (props) => {
               Web3 & Blockchain based platform enabling bookings + deliveries.
             </h4>
           </div>
-          <div style={{display:"block"}}>
+          <div style={{display:"block", zIndex:"11"}}>
           <div className="descriptor">
             {tickItem}
             <h6>PWA, install it to your phone as an app
-      
             </h6>
           </div>
           <div className="descriptor">
@@ -94,7 +97,7 @@ const Lalo = (props) => {
                 providers.
               </h6>
             </div>
-            <div style={{ display: "flex", flexDirection: "row", justifyContent:"space-around" }}>
+            <div style={{ display: "flex", flexDirection: "row", justifyContent:"space-around", zIndex:"11" }}>
               {stareighty}
               {starhundred}
             </div>

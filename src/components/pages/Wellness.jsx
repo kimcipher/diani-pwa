@@ -8,7 +8,7 @@ function Wellness() {
     {
       name: "On site Massage",
       number: "+254115144146",
-      message: "Hello DianiApp 😊 I need Massage 💆",
+      message: "Hello DianiApp 😊 I need onsite Massage 💆",
       className: "whatsapp",
       image: dinner,
       desc: "image desc",
@@ -16,7 +16,7 @@ function Wellness() {
     {
       name: "On Site Hair & Make up",
       number: "+254115144146",
-      message: "Hello DianiApp 😊 I need on site hair & make up 💇",
+      message: "Hello DianiApp 😊 I need onsite Hair and Make up 💇",
       className: "whatsapp",
       image: fx,
       desc: "image desc",
@@ -24,7 +24,7 @@ function Wellness() {
     {
       name: "Schedule a Yoga Class",
       number: "+254115144146",
-      message: "Hello DianiApp 😊 I need to sohedule a yoga class🧘",
+      message: "Hello DianiApp 😊 I need to schedule a Yoga Class🧘",
       className: "whatsapp",
       image: fx,
       desc: "image desc",
@@ -32,7 +32,7 @@ function Wellness() {
     {
       name: "On Site Nail Service",
       number: "+254115144146",
-      message: "Hello DianiApp 😊 I need on site nail service 💅",
+      message: "Hello DianiApp 😊 I need onsite Nail Service 💅",
       className: "whatsapp",
       image: drink,
       desc: "image desc",

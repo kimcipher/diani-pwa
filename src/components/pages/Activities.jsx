@@ -7,37 +7,37 @@ function Activities() {
   const data = [
     {
         name: "Snorkeling",
-        message: "Hi DianiApp 😊 I'm interested in Snorkeling 🛥️",
+        message: "Hi DianiApp 😊 I'm interested in Snorkeling 🤿",
         number: "+254115144146",
         background: snorkeling,
     },
     {
       name: "Camel Rides",
-      message: "Hi DianiApp 😊 I'm interested in a Camel Ride",
+      message: "Hi DianiApp 😊 I'm interested in a Camel Ride 🐫",
       number: "+254115144146",
       background: camel,
     },
     {
       name: "Quad",
-      message: "Hi DianiApp 😊 I'm interested in Quad Bike rides",
+      message: "Hi DianiApp 😊 I'm interested in Quad Bike ride 🏍️",
       number: "+254115144146",
       background: quad,
     },
     {
       name: "Sky diving",
-      message: "Hi DianiApp 😊 I'm interested in Sky Diving ",
+      message: "Hi DianiApp 😊 I'm interested in Sky Diving 🪂",
       number: "+254115144146",
       background: skydiving,
     },
     {
       name: "Skiing ",
-      message: "Hi DianiApp 😊 I'm interested in Skiing ",
+      message: "Hi DianiApp 😊 I'm interested in Jet Skiing 🚤",
       number: "+254115144146",
       background: skiing,
     },
     {
       name: "Skiing ",
-      message: "Hi DianiApp 😊 I'm interested in Skiing ",
+      message: "Hi DianiApp 😊 I'm interested in watching sunset Sunset/ Sunrise 🌇",
       number: "+254115144146",
       background: sunset,
     },

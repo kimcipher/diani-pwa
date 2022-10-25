@@ -144,4 +144,15 @@ longest  */
     font-size: 10px;
     text-align: left;
     font-weight: normal;
+    z-index: 12;
+}
+.unknown{
+    position:absolute;
+    width:300px;
+    top:20%;
+    right:0;
+    z-index: 8;
+}
+.unknown-image{
+    width:350px;
 }
