@@ -17,7 +17,6 @@ import {
 } from "./icons";
 import "./css/Lalo.css";
 import { Carousel } from "react-responsive-carousel";
-import Collapsible from "react-collapsible";
 import PWA from "./assets/PWA.png"
 import UDL from "./assets/udl.png"
 import Mini from "./assets/minidianipp.png"
