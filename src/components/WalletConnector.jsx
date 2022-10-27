@@ -83,7 +83,7 @@ const InterractiveSection = () => {
               </TabPanel>
               <TabPanel className="transition" style={{ justifyContent: "center"}}>
                 <h3 style={{ color: "#000", fontWeight: "bold", marginTop:"50px", fontSize:"0.8em"  }}>
-                  Free WIFI is only available at these locations
+                  Free WIFI coming soon !
                 </h3>
               </TabPanel>
               <TabList className="icons-flex">
@@ -91,7 +91,12 @@ const InterractiveSection = () => {
                 <Tab>
                   <div>{walletconnectionsmall}</div>
                 </Tab>
-                <Tab>{profile}</Tab>
+                <Tab>
+                  {/* {profile} */}
+                  <h3 style={{ color: "#000", fontWeight: "bold", marginTop:"50px", fontSize:"0.8em"  }}>
+                    Profile creation coming soon !
+                  </h3>
+                </Tab>
                 <Tab>{wifi}</Tab>
                 {/* <Tab style={{position:"absolute", right:"3vw", bottom: "11vh", zIndex:100, width:"50px", height:"50px"}}>{walletconnectionsmall}</Tab>
                 <Tab style={{position:"absolute", right:"3vw", bottom: "18vh", zIndex:100, width:"50px", height:"50px"}}>{walletconnectionsmall}</Tab> */}

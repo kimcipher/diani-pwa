@@ -31,9 +31,6 @@ const MobileFooter = ({ setItIsOpen }) => {
         </div>
       </NavLink>
       <br/><br/><br/>
-      {/* <p>
-        <WalletConnect />
-      </p> */}
 
         <br />
         <br />

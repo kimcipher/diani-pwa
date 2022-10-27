@@ -42,9 +42,9 @@ const Lalo = (props) => {
       showStatus={false}
       >
         <div>
-          <div className="unknown">
+          {/* <div className="unknown">
             <img className="unknown-image" src={Mini} alt="Mini Diani App"/>
-          </div>
+          </div> */}
           <div
             style={{
               display: "flex",
@@ -96,11 +96,11 @@ const Lalo = (props) => {
                 providers.
               </h6>
             </div>
-            <div style={{ display: "flex", flexDirection: "row", justifyContent:"space-around", zIndex:"11" }}>
+            <div className="counts">
               {stareighty}
               {starhundred}
             </div>
-            <div style={{ display: "flex", flexDirection: "row", justifyContent:"space-around", width:"auto", margin:"auto", marginTop:"30px" }}>
+            <div style={{ display: "flex", flexDirection: "row", justifyContent:"space-around", width:"auto", margin:"auto", marginTop:"30px"}}>
               <div>{webtatu}<br/> <h5>Web3</h5></div>
               <img src={UDL} style={{width:"150px"}}/>
               <img src={PWA} style={{width:"50px"}}/>
@@ -110,7 +110,7 @@ const Lalo = (props) => {
         <div>
           {/* <div className="child" onClick={() => setItIsOpen(false)}>
                     <div className="closest" onClick={() => setItIsOpen(false)}>+</div>
-                </div> */}
+                </div> */},
           <div
             className="child"
             style={{
