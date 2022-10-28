@@ -108,8 +108,8 @@ function HowItWorks() {
           background: "transparent",
           border: "none",
           display: "flex",
-          justifyContent: "space-around",
-          width: "50%",
+          // justifyContent: "space-around",
+          width: "40%",
           cursor:"pointer",
         }}
         onClick={() => {
@@ -117,7 +117,7 @@ function HowItWorks() {
         }}
       >
         {paypal}
-        <h4>PayPal </h4>
+        <h4 style={{marginLeft:"10px"}}>PayPal </h4>
       </button>
     );
   };
