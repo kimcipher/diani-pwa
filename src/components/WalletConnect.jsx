@@ -3,33 +3,33 @@ import { interractive, message, walletconnectionsmall, profile, wifi, messagetem
 import "./css/walletModal.css";
 import Popup from 'reactjs-popup';
 import ReactWhatsapp from "react-whatsapp";
-import {Tab, Tabs, TabLIst, TabPanel, TabList } from "react-tabs";
+import {Tab, Tabs, TabPanel, TabList } from "react-tabs";
 // import 'react-tabs/style/react-tabs.css';
 
 function WalletConnect() {
-  const [currentAccount, setCurrentAccount] = useState("");
-  const checkIfWalletIsConnected = async () => {
-    try {
-      const { ethereum } = window;
-      if (!ethereum) {
-        console.log("Make sure you have metamask");
-      } else {
-        console.log("We have the ethereum object", ethereum);
-      }
+  const [ setCurrentAccount] = useState("");
+  // const checkIfWalletIsConnected = async () => {
+  //   try {
+  //     const { ethereum } = window;
+  //     if (!ethereum) {
+  //       console.log("Make sure you have metamask");
+  //     } else {
+  //       console.log("We have the ethereum object", ethereum);
+  //     }
 
-      const accounts = await ethereum.request({ method: "eth_accounts" });
+  //     const accounts = await ethereum.request({ method: "eth_accounts" });
 
-      if (accounts.length !== 0) {
-        const account = accounts[0];
-        console.log("Found and authorized account : ", account);
-        setCurrentAccount(account);
-      } else {
-        console.log("No authorized account available");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  //     if (accounts.length !== 0) {
+  //       const account = accounts[0];
+  //       console.log("Found and authorized account : ", account);
+  //       setCurrentAccount(account);
+  //     } else {
+  //       console.log("No authorized account available");
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
   const connectWallet = async () => {
     try {
       const { ethereum } = window;
@@ -72,9 +72,9 @@ function WalletConnect() {
               <TabPanel className="transition" onClick={connectWallet}>{connecttemplate} {wifi}</TabPanel>
               <TabPanel className="transition">{accounttemplate} {wifi} </TabPanel>
               <TabPanel className="transition"><h3 style={{color:"#000", fontWeight:"bold"}}>Tap outside the modal to close</h3></TabPanel>
-                <TabList className="icons-flex">
+              <TabList className="icons-flex">
                   <Tab>{message}</Tab> <Tab><div>{walletconnectionsmall}</div></Tab><Tab>{profile}</Tab> <Tab><div>{closevg}</div></Tab>
-                </TabList>
+              </TabList>
             </Tabs>
         </div>
       </Popup>

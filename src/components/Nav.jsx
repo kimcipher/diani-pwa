@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+/* eslint-disable jsx-a11y/img-redundant-alt */
+// import { useState, useEffect } from "react";
 import "./css/Nav.css";
 import logo from "./assets/logo.png";
-import toast from "react-hot-toast";
-import { addHome, reallogo, installation } from "./icons";
-import WeatherIcon from "../components/WeatherIcon";
+// import toast from "react-hot-toast";
+// import { addHome, reallogo, installation } from "./icons";
+// import WeatherIcon from "../components/WeatherIcon";
 import { NavLink } from "react-router-dom";
 import { usePwa } from "react-pwa-app";
 
@@ -12,12 +13,12 @@ function Nav() {
 
   console.log(pwa.registration); // ServiceWorkerRegistration
   const currentTime = new Date().toLocaleTimeString();
-  console.log("#######", pwa);
+  console.log("#######", currentTime);
 
 
 
   const Pwabtn =()=>{
-    if(pwa.isInstalled == "standalone"){
+    if(pwa.isInstalled === "standalone"){
       return null
     } else {
       return(
@@ -43,7 +44,7 @@ function Nav() {
       <div className="nav-main">
         <div className="Logo-container">
           <NavLink to="/">
-            <img src={logo} alt="logo image" />
+            <img src={logo} alt="logo image"/>
           </NavLink>
         </div>
         <div className="Links-container">

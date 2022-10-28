@@ -1,21 +1,13 @@
-import React, {useState} from "react";
+import React from "react";
 import "./css/home.css";
 import ReactWhatsapp from "react-whatsapp";
-import { ethers } from "ethers"
 import {
-  drink,
   dinner,
   taxi,
   plane,
-  fx,
   scooter,
-  scootersmall,
-  bikesmall,
   bike,
   foodgrp,
-  cryptobtc,
-  hotel,
-  boatsvg,
   groceries,
   packageicon,
   ksh,
@@ -26,14 +18,9 @@ import {
   boat,
   geek,
   fix,
-  walletconnecticon,
-  amazon,
   bookingicon,
-  kes,
   cryptobtnnew,
   shopping,
-  icongrup,
-  icongroup,
   amazonpkgo,
   bankfx,
   renta,

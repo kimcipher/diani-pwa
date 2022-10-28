@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./css/footer.css";
 import Nai from "./assets/nAIROBI-ART.png";
 import Logo from "./assets/logo.png";
@@ -9,9 +9,9 @@ import {
   bookingcom,
   justEat,
   jumialogo,
-  lalologo,
+  // lalologo,
 } from "./icons";
-import WalletConnect from "./WalletConnect";
+// import WalletConnect from "./WalletConnect";
 
 const MobileFooter = ({ setItIsOpen }) => {
   const currentDate = new Date().getFullYear();

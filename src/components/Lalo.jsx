@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   line,
   oneeight,
@@ -6,8 +6,6 @@ import {
   people,
   location,
   bookings,
-  shopping,
-  livecon,
   lalologo,
   kulosa,
   tickItem,
@@ -102,8 +100,8 @@ const Lalo = (props) => {
             </div>
             <div style={{ display: "flex", flexDirection: "row", justifyContent:"space-around", width:"auto", margin:"auto", marginTop:"30px" }}>
               <div>{webtatu}<br/> <h5>Web3</h5></div>
-              <img src={UDL} style={{width:"150px"}}/>
-              <img src={PWA} style={{width:"50px"}}/>
+              <img src={UDL} style={{width:"150px"}} alt="alt"/>
+              <img src={PWA} style={{width:"50px"}} alt="alt"/>
             </div>
           </div>
         </div>

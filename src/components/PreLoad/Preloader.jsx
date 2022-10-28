@@ -1,6 +1,6 @@
 import React from "react";
 import "./text.css";
-import Logo from "../assets/logosmall.png";
+// import Logo from "../assets/logosmall.png";
 
 function Preloader() {
   return (

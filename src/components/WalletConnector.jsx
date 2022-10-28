@@ -13,7 +13,8 @@ import {
 import "./css/walletModal.css";
 import ReactWhatsapp from "react-whatsapp";
 import { Tab, Tabs, TabPanel, TabList } from "react-tabs";
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+// import { ConnectButton } from '@rainbow-me/rainbowkit';
+import ConnectWalet from  "./../ConnectWallet"
 
 // import { WalletLinkConnector } from "@web3-react/walletlink-connector";
 // import {WalletConnectConnector} from '@web3-react/walletconnect-connector';
@@ -72,7 +73,8 @@ const InterractiveSection = () => {
               </TabPanel>
               <TabPanel className="transition" style={{ justifyContent: "center"}} >
                 <div style={{marginTop:"70px", display:"flex", flexDirection:"row"}}>
-                  <ConnectButton/>
+                  {/* <ConnectButton/> */}
+                  <ConnectWalet />
                   {/* <button onClick={() => { activate(CoinbaseWallet) }} style={{color:"#fff", background:"navy", padding:'10px',borderRadius:"5px"}}>Coinbase Wallet</button>
                   <button onClick={() => { activate(WalletConnect) }} style={{color:"#fff", background:"navy", padding:'10px',borderRadius:"5px"}}>Wallet Connect</button> */}
                   {/* <button onClick={() => { activate(Injected) }} style={{color:"#fff", background:"navy", padding:'10px',borderRadius:"5px"}}>Metamask</button> */}
