@@ -110,7 +110,7 @@ const Lalo = (props) => {
         <div>
           {/* <div className="child" onClick={() => setItIsOpen(false)}>
                     <div className="closest" onClick={() => setItIsOpen(false)}>+</div>
-                </div> */},
+                </div> */}
           <div
             className="child"
             style={{

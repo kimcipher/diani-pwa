@@ -22,7 +22,9 @@ const MobileFooter = ({ setItIsOpen }) => {
   };
   return (
     <div className="foot-container">
-      <br/><br/><br/>
+      <br/><br/>
+      <h4>Need Help ? Call : +254 115 144 146</h4>
+      <br/>
       <NavLink to="/how-it-works" className="how">
         <div className="wrap-how">
           <h4>
