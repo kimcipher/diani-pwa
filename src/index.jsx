@@ -20,6 +20,8 @@ import { ClearBrowserCacheBoundary } from "react-clear-browser-cache";
 import {CookiesProvider} from "react-cookie"
 import { Web3ReactProvider } from '@web3-react/core'
 import { Web3Provider } from "@ethersproject/providers";
+import { transitions, positions, Provider as AlertProvider } from 'react-alert'
+import AlertTemplate from 'react-alert-template-basic'
 
 function getLibrary(provider){
   return new Web3Provider(provider);
@@ -78,6 +80,16 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+const options = {
+  // you can also just use 'bottom center'
+  position: positions.BOTTOM_CENTER,
+  timeout: 5000,
+  offset: '30px',
+  // you can also just use 'scale'
+  transition: transitions.SCALE,
+  width:"auto",
+  padding:"10px"
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -115,7 +127,9 @@ root.render(
               <ClearBrowserCacheBoundary>
                 <CookiesProvider>
                   <Web3ReactProvider getLibrary={getLibrary}>
-                    <App />
+                    <AlertProvider template={AlertTemplate} {...options}>
+                      <App />
+                    </AlertProvider>
                   </Web3ReactProvider>
                 </CookiesProvider>
                 <PWAPrompt
