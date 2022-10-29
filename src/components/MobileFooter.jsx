@@ -22,7 +22,9 @@ const MobileFooter = ({ setItIsOpen }) => {
   };
   return (
     <div className="foot-container">
-      <br/><br/><br/>
+      <br/><br/>
+      <h4>Need Help ? Call : +254 115 144 146</h4>
+      <br/>
       <NavLink to="/how-it-works" className="how">
         <div className="wrap-how">
           <h4>
@@ -31,9 +33,6 @@ const MobileFooter = ({ setItIsOpen }) => {
         </div>
       </NavLink>
       <br/><br/><br/>
-      {/* <p>
-        <WalletConnect />
-      </p> */}
 
         <br />
         <br />
@@ -45,7 +44,7 @@ const MobileFooter = ({ setItIsOpen }) => {
           {" "}
           DianiApp &trade; is a partner-based dApp Within &nbsp;
           <span style={{ textTransform: "uppercase", color: "#ff99ff", cursor:"pointer" }} onClick={clicked}>
-            LaLo Communitites &nbsp;
+            LaLo Communities &nbsp;
           </span>
           ecosystem. <br className="dissapear"/>LaLo Communities is a Web3+Blockchain powered Bookings & Deliveries dApp for Anything. Anytime. <br/><br/> A mashup of .... <br/><br/> 
         </p>

@@ -1,158 +1,197 @@
-.Lalo-main{
+.Lalo-main {
     position: fixed;
-    top:20vh;
-    min-height:auto;
-    margin:auto;
-    background-color:#1B254A;
-    height:auto;
-    width:80vw;
-    left:5vw;
-    border-radius:20px;
-    display:block;
-    padding:4%;
-    transition:all 1s ease-in-out;
+    top: 20vh;
+    min-height: auto;
+    margin: auto;
+    background-color: #1B254A;
+    height: auto;
+    width: 80vw;
+    left: 5vw;
+    border-radius: 20px;
+    display: block;
+    padding: 4%;
+    transition: all 1s ease-in-out;
 }
-.carousel-root{
-    height:60vh;
+
+.carousel-root {
+    height: 60vh;
 }
-.Lalo-main p{
+
+.Lalo-main p {
     background-color: transparent;
-    font-weight:bold;
-    font-size:0.8em;
-    text-align:left ;
-    line-height:15px;
+    font-weight: bold;
+    font-size: 0.8em;
+    text-align: left;
+    line-height: 15px;
 }
-.Lalo-main .collapsible p{
+
+.Lalo-main .collapsible p {
     line-height: 10px;
 }
-.closest{
-    color:#fff;
+
+.closest {
+    color: #fff;
     font-size: 2em;
     border-radius: 50%;
-    width:30px;
-    height:30px;
-    cursor:pointer;
-    position:absolute;
-    
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+
 }
-.closest svg{
-    width:30px;
-    height:30px;
+
+.closest svg {
+    width: 30px;
+    height: 30px;
+
 }
-@media screen and (min-width:1000px){
-    .closest{
-        margin-top:-50px;
+
+@media screen and (min-width:1000px) {
+    .closest {
+        margin-top: -50px;
     }
 }
-.child{
-    width:100%;
-    height:auto;
+
+.child {
+    width: 100%;
+    height: auto;
     text-align: left;
     margin-left: 20px;
-    padding-top:10px;
+    padding-top: 10px;
 }
-.child-container{
+
+.child-container {
     display: flex;
-    flex-wrap:wrap;
-    width:90%;
+    flex-wrap: wrap;
+    width: 90%;
 }
-.child-container-child{
-    width:40%;
-    height:auto;
-    margin-right:10px;
-    margin-bottom:10px;
+
+.child-container-child {
+    width: 40%;
+    height: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
     align-items: left;
     text-align: left;
 
 }
-.child-container-child-spec{
-    width:40%;
-    height:auto;
-    margin-right:10px;
-    margin-bottom:10px;
+
+.child-container-child-spec {
+    width: 40%;
+    height: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
     align-items: left;
     text-align: left;
-    min-height:130px
+    min-height: 130px
 }
-.child-container-child-spec .collapsible{
-    width:100%;
+
+.child-container-child-spec .collapsible {
+    width: 100%;
     margin-left: 15px;
     font-size: 0.8em;
-    border:1px solid gray;
-    margin-top:5px;
-    padding:5px;
+    border: 1px solid gray;
+    margin-top: 5px;
+    padding: 5px;
     border-radius: 5px;
 }
-.child-container-child-spec .collapsible p{
+
+.child-container-child-spec .collapsible p {
     font-size: 0.7em;
 }
-.child-container-child-spec h3{
-    color:#fff;
+
+.child-container-child-spec h3 {
+    color: #fff;
     font-size: 15px;
     margin-bottom: 0;
     margin-left: 15px;
     font-weight: bold;
 }
-.child-closer{
-    position:absolute;
-    right:10%;
-    width:40px;
-    height:40px;
+
+.child-closer {
+    position: absolute;
+    right: 10%;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     z-index: 10000000;
 }
-@media screen and (min-width:1000px){
-    .Lalo-main{
-        width:40vw;
-        left:25vw;
+
+@media screen and (min-width:1000px) {
+    .Lalo-main {
+        width: 40vw;
+        left: 25vw;
     }
-    .closest{
+
+    .closest {
         position: fixed;
-        right:28vw;
+        right: 28vw;
         font-size: 3em;
     }
-    .child-container{
-        width:70%;
+
+    .child-container {
+        width: 70%;
     }
 }
-.spec{
+
+.spec {
     text-align: right;
-    width:90%;
+    width: 90%;
 }
 
 /* //group anagrams 
 longest  */
 
-.small{
+.small {
     font-size: 5px;
 }
-.descriptor{
-    display:flex;
+
+.descriptor {
+    display: flex;
     flex-direction: row;
     margin-bottom: 20px;
     text-align: left;
 }
-.descriptor svg{
-    width:20px;
-    height:20px;
-    margin-right:10px;
+
+.descriptor svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    z-index: 100;
 }
-.carry{
-    height:auto;
+
+.carry {
+    height: auto;
 }
-.Lalo-main h6{
+
+.Lalo-main h6 {
     font-size: 10px;
     text-align: left;
     font-weight: normal;
     z-index: 12;
 }
-.unknown{
-    position:absolute;
-    width:300px;
-    top:20%;
-    right:0;
+
+.unknown {
+    position: absolute;
+    width: 300px;
+    top: 20%;
+    right: 0;
     z-index: 8;
 }
-.unknown-image{
-    width:350px;
+
+.unknown-image {
+    width: 350px;
+}
+
+.counts {
+    display: flex;
+     flex-direction: row;
+     justify-content:space-around;
+     z-index:100;
+     
+     background-color: #1B254A;
+}
+.counts svg{
+    z-index: 100;
+    background-color: #1B254A;
 }
