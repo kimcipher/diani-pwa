@@ -42,9 +42,9 @@ const Lalo = (props) => {
       showStatus={false}
       >
         <div>
-          {/* <div className="unknown">
+          <div className="unknown">
             <img className="unknown-image" src={Mini} alt="Mini Diani App"/>
-          </div> */}
+          </div>
           <div
             style={{
               display: "flex",
