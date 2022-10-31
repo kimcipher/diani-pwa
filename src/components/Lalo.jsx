@@ -40,69 +40,38 @@ const Lalo = (props) => {
       showStatus={false}
       >
         <div>
-          <div className="unknown">
-            <img className="unknown-image" src={Mini} alt="Mini Diani App"/>
+          <div className="child" style={{ marginTop: "20px" }}>
+            <p style={{textTransform:"uppercase", fontSize:"0.7em"}}>
+              {lalologo}<br/>
+              LALO COMMUNITIES is AN ALWAYS ON
+              <br /> 24/7 INSTANT WEB3 BOOKING DAPP
+              <br /> powering small communities & THEIR <br /> VISITORS 🌎.
+              <br />
+              <br /> Deliveries. Bookings . Anything Anytime
+            </p>
           </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-around",
-              width: "150px",
-              maxHeight:"50px",
-              lineHeight:"2px",
-              marginBottom:"20px"
-
-
-            }}
-          >
-            {lalologo} &nbsp;{" "}
-            <div style={{ textAlign: "left"}}>
-              <p style={{ textAlign: "left", color: "#fff", lineHeight:"10px" }}>Lalo</p>
-              <p style={{ textAlign: "left", color: "#fff", lineHeight:"10px" }}>Communities</p>
+          <div className="child">
+            <div className="child-container">
+              <div className="child-container-child">{foodwhite} Food</div>
+              <div className="child-container-child">{drinkwhite} Drinks</div>
+              <div className="child-container-child">
+                {grocerieswhite} Groceries
+              </div>
+              {/* <div className="child-container-child">{credit} Bookings</div> */}
+              <div className="child-container-child">{shopping} Shopping</div>
             </div>
           </div>
-          <div style={{marginBottom:"20px"}}>
-            <h4>
-              Web3 & Blockchain based platform enabling bookings + deliveries.
-            </h4>
-          </div>
-          <div style={{display:"block", zIndex:"11"}}>
-          <div className="descriptor">
-            {tickItem}
-            <h6>PWA, install it to your phone as an app
-            </h6>
-          </div>
-          <div className="descriptor">
-            {tickItem}
-            <h6>
-              Order anything + anytime at the comfort of your existing apps
-              (WhatsApp)
-            </h6>
-            </div>
-            <div className="descriptor">
-              {tickItem}
-              <h6>
-                An array of payment options including MPESA, Credit Cards,
-                PayPal and Crypto.
-              </h6>
-            </div>
-            <div className="descriptor">
-              {tickItem}
-              <h6>
-                Connect various local and international tourists to services
-                providers.
-              </h6>
-            </div>
-            <div style={{ display: "flex", flexDirection: "row", justifyContent:"space-around", zIndex:"11" }}>
-              {stareighty}
-              {starhundred}
-            </div>
-            <div style={{ display: "flex", flexDirection: "row", justifyContent:"space-around", width:"auto", margin:"auto", marginTop:"30px" }}>
-              <div>{webtatu}<br/> <h5>Web3</h5></div>
-              <img src={UDL} style={{width:"150px"}} alt="alt"/>
-              <img src={PWA} style={{width:"50px"}} alt="alt"/>
-            </div>
+          <div className="child">
+            <h3
+              style={{
+                color: "#fff",
+                textAlign: "center",
+                marginLeft: "-50px",
+                fontWeight: "bold",
+              }}
+            >
+              Try Us!
+            </h3>
           </div>
         </div>
         <div>

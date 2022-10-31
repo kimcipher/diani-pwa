@@ -80,12 +80,14 @@ const InterractiveSection = () => {
                   {/* <button onClick={() => { activate(Injected) }} style={{color:"#fff", background:"navy", padding:'10px',borderRadius:"5px"}}>Metamask</button> */}
                 </div>
               </TabPanel>
-              <TabPanel className="transition">
-                {accounttemplate} 
+              <TabPanel className="transition" style={{ justifyContent: "center"}}>
+              <h3 style={{ color: "#000", fontWeight: "bold", marginTop:"50px", fontSize:"0.8em"  }}>
+                  Profile creation coming soon
+                </h3>
               </TabPanel>
               <TabPanel className="transition" style={{ justifyContent: "center"}}>
                 <h3 style={{ color: "#000", fontWeight: "bold", marginTop:"50px", fontSize:"0.8em"  }}>
-                  Free WIFI is only available at these locations
+                  Free wifi coming soon
                 </h3>
               </TabPanel>
               <TabList className="icons-flex">
