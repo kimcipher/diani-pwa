@@ -19,13 +19,13 @@ import { Modal } from "../Modal/Modal";
 import { CopyToClipboardIcon } from "../Modal/CopyToClipboardIcon";
 import { UnstoppableDomain } from "../Modal/UnstoppableDomain";
 import { useCopyToClipboard } from "react-use-copy-to-clipboard";
-import { useAlert } from "react-alert";
+// import { useAlert } from "react-alert";
 
 function HowItWorks() {
   const [open, setOpen] = useState(false);
   const [domain, setDomain] = useState("lalocommunities.crypto");
   const [records, setRecords] = useState([]);
-  const alert = useAlert();
+  // const alert = useAlert();
 
   const showModal = () => {
     setOpen(!open);
@@ -112,9 +112,9 @@ function HowItWorks() {
           width: "40%",
           cursor:"pointer",
         }}
-        onClick={() => {
-          alert.show("(hellodianiapp@gmail.com) Copied");
-        }}
+        onClick={
+          alert("(hellodianiapp@gmail.com) Copied")
+        }
       >
         {paypal}
         <h4 style={{marginLeft:"10px"}}>PayPal </h4>
