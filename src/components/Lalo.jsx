@@ -11,7 +11,11 @@ import {
   tickItem,
   starhundred,
   stareighty,
-  webtatu
+  webtatu,
+  foodwhite,
+  drinkwhite,
+  grocerieswhite,
+  shopping
 } from "./icons";
 import "./css/Lalo.css";
 import { Carousel } from "react-responsive-carousel";
