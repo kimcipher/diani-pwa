@@ -24,6 +24,14 @@ const uauthWalletModule = uauthOnboard.module({
 const ConnectWalet = () => {
   const [address, setAddress] = useState("");
   const [wallet, setWallet] = useState("");
+  const [balance, setBalance] = useState("");
+  // const [network, setNetwork] = useState("");
+
+  const shortenWallet = (address) => {
+    return address.startsWith("0")
+      ? `${address.substring(0, 6)}...${address.substring(address.length - 4)}`
+      : address;
+  };
 
   const onboard = useMemo(
     () =>
@@ -52,6 +60,21 @@ const ConnectWalet = () => {
 
             setWallet(wallet);
           },
+          // network: (networt) => {
+          //   if (wallet) {
+          //     window.localStorage.setItem("selectedNetwork", network);
+          //   }
+
+          //   setNetwork(wallet);
+          // },
+          balance: (bal) => {
+            console.log("Balance", bal);
+            if (bal) {
+              const newBalance = parseFloat(parseInt(bal) / 1e18).toFixed(4);
+              window.localStorage.setItem("selectedBalance", newBalance);
+              setBalance(newBalance);
+            }
+          },
         },
         darkMode: true,
       }),
@@ -72,6 +95,7 @@ const ConnectWalet = () => {
           })
           .catch(() => {
             window.localStorage.removeItem("selectedWallet");
+            window.localStorage.removeItem("selectedBalance");
           });
       } else {
         onboard.walletSelect(previouslySelectedWallet);
@@ -97,12 +121,45 @@ const ConnectWalet = () => {
   };
 
   if (address) {
-    console.log("wallet:", wallet);
     return (
-      <>
-        <div>Connected to {address}</div>
-        <button onClick={handleLogout}>Logout</button>
-      </>
+      <div>
+        <div style={{ color: "black", marginBottom: "0.5rem" }}>
+          Connected:{" "}
+          <span
+            style={{
+              marginBottom: "0.5rem",
+              color: "#2A2F45",
+              fontWeight: "bold",
+            }}
+          >
+            {shortenWallet(address)}
+          </span>
+        </div>
+
+        <div style={{ color: "black", marginBottom: "0.5rem" }}>
+          Balance:{" "}
+          <span
+            style={{
+              marginBottom: "0.5rem",
+              color: "#2A2F45",
+              fontWeight: "bold",
+            }}
+          >
+            {balance} ETH
+          </span>
+        </div>
+        <button
+          style={{
+            color: "#fff",
+            backgroundColor: "#2A2F45",
+            borderRadius: "0.5rem",
+            padding: "0.5rem",
+          }}
+          onClick={handleLogout}
+        >
+          Disconnect
+        </button>
+      </div>
     );
   }
 
