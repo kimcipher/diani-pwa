@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./css/footer.css";
 import Nai from "./assets/nAIROBI-ART.png";
 import Logo from "./assets/logo.png";
@@ -9,9 +9,9 @@ import {
   bookingcom,
   justEat,
   jumialogo,
-  // lalologo,
+  lalologo,
 } from "./icons";
-// import WalletConnect from "./WalletConnect";
+import WalletConnect from "./WalletConnect";
 
 const MobileFooter = ({ setItIsOpen }) => {
   const currentDate = new Date().getFullYear();
@@ -23,7 +23,7 @@ const MobileFooter = ({ setItIsOpen }) => {
   return (
     <div className="foot-container">
       <br/><br/>
-      <h4>Need Help ? Call : +254 115 144 146</h4>
+      <h4>Need Help ? Call : <a href="tel:254115144146">+254115144146</a></h4>
       <br/>
       <NavLink to="/how-it-works" className="how">
         <div className="wrap-how">

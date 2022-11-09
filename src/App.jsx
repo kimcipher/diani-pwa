@@ -77,6 +77,8 @@ function App() {
       <MobileNav />
       <BotIcon/>
       <Routes>
+        <Route path="/signup" element={<Signup/>}/>
+        <Route path="/signin" element={<SignIn/>}/>
         <Route path="/" element={<Home />} />
         <Route path="/popular" element={<Home />} />
         <Route path="/Wellness" element={<Wellness />} />
