@@ -25,6 +25,8 @@ import InterractiveSection from "./components/WalletConnector.jsx";
 import Preloader from "./components/PreLoad/Preloader";
 // import {useCookies} from 'react-cookie';
 import {WalletProvider}  from  "./context/WalletContext"
+import Signup from "./components/Wifi/Signup"
+import SignIn from "./components/Wifi/SignIn"
 
 function App() {
   // const [cookies, setCookie, removeCookie] = useCookies(['cookie-name']);
