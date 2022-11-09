@@ -1,7 +1,12 @@
  import React from "react";
 import "../css/act.css";
 import ReactWhatsapp from "react-whatsapp";
-import {snorkeling, camel, quad, skydiving, skiing, sunset} from "./images"
+import snorkeling from "../assets/activities/Snorkeling.png"
+import camel from "../assets/activities/camel.jpg"
+import quad from "../assets/activities/Quad-Bike.png"
+import skydiving from "../assets/activities/skydiving.jpg"
+import skiing from "../assets/activities/Jet-Skiing.jpg"
+import sunset from "../assets/activities/Sunset.webp"
 
 function Activities() {
   const data = [
