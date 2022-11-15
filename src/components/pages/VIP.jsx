@@ -3,6 +3,7 @@ import "../css/home.css";
 import ReactWhatsapp from "react-whatsapp";
 import { drink, dinner, fx, food } from "../icons";
 import useAnalyticsEventTracker from "../../useAnalyticsEventTracker";
+import {Adsense} from "@ctrl/react-adsense"
 
 function VIP() {
   const gaEventTracker = useAnalyticsEventTracker('VIP')
@@ -52,6 +53,13 @@ function VIP() {
   return (
     <div className="activities">
       <h2>VIP</h2>
+        <Adsense
+          client="ca-pub-3733538819337098"
+          slot="7259870550"
+          style={{ display: 'block' }}
+          layout="in-article"
+          format="fluid"
+        />
       <div className="Tabs-container">
         {data.map((item, index) => {
           let tag = item.name
