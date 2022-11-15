@@ -2,8 +2,10 @@ import React from "react";
 import "../css/home.css";
 import ReactWhatsapp from "react-whatsapp";
 import { drink, dinner, fx, food } from "../icons";
+import useAnalyticsEventTracker from "../../useAnalyticsEventTracker";
 
 function Wellness() {
+  const gaEventTracker = useAnalyticsEventTracker('Wellness')
   const data = [
     {
       name: "On site Massage",
@@ -52,18 +54,23 @@ function Wellness() {
     <div className="container">
       <h2>Wellness</h2>
       <div className="Tabs-container">
-        {data.map((item, index) => (
+        {data.map((item, index) => {
+          let tag = item.name
+          return(
           <ReactWhatsapp
             key={index}
             number={item.number}
             message={item.message}
             className={item.className}
+            onClick={()=>gaEventTracker({tag})}
           >
             <div className="Tab-item-wellness">
               <div>{item.name}</div>
             </div>
           </ReactWhatsapp>
-        ))}
+          )
+        }
+        )}
       </div>
     </div>
   );

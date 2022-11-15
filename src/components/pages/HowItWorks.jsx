@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 // import { Carousel } from 'react-responsive-carousel';
+import useAnalyticsEventTracker from "../../useAnalyticsEventTracker";
 import "../css/carousel.css";
 import {
   mpesa,

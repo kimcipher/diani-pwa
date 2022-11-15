@@ -11,22 +11,21 @@ import VIP from "./components/pages/VIP";
 import MobileNav from "./components/MobileNav";
 import Type from "./components/Type";
 import HowItWorks from "./components/pages/HowItWorks";
-// import AddToHomeScreen from "@ideasio/add-to-homescreen-react";
 import BotIcon from "./components/BotIcon"
-// import Rating from "./components/pages/RatingView"
 import "animate.css/animate.min.css";
 import DefaultNav from "./components/DefaultNav";
-// import {AnimationOnScroll} from "react-animation-on-scroll"
-// import Popup from "./components/Popup"
-// import {Toaster}  from  "react-hot-toast"
 import Lalo from "./components/Lalo"
 import "@fontsource/montserrat"; // Defaults to weight 400.
 import InterractiveSection from "./components/WalletConnector.jsx";
 import Preloader from "./components/PreLoad/Preloader";
-// import {useCookies} from 'react-cookie';
 import {WalletProvider}  from  "./context/WalletContext"
 import Signup from "./components/Wifi/Signup"
 import SignIn from "./components/Wifi/SignIn"
+import ReactGA from 'react-ga'
+
+const TRACKING_ID = "G-Q6E9KV4GKH";
+ReactGA.initialize(TRACKING_ID);
+
 
 function App() {
   // const [cookies, setCookie, removeCookie] = useCookies(['cookie-name']);
@@ -39,26 +38,14 @@ function App() {
     setTimeout(() => setIsLoading(false), 3000);
   }, [])
 
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  },[])
+
   const setPopupOpen = () => {
     setItIsOpen(!itIsOpen);
   }
   
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //    setIsOpen(true)  
-  //   }, [5000]);
-  //   // I will be deleted while component is unmounting.
-  //   return () => clearTimeout(timer) 
-  //   }, []);
-  //   useEffect(() => {
-  //     const timer = setTimeout(() => {
-  //      setIsOpen(false)  
-  //     }, [20000]);
-  //     // I will be deleted while component is unmounting.
-  //     return () => clearTimeout(timer) 
-  //     }, []);
-
 
   return (
     <WalletProvider>

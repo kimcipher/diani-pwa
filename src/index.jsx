@@ -13,10 +13,6 @@ import { Web3ReactProvider } from '@web3-react/core'
 import { Web3Provider } from "@ethersproject/providers";
 // import { transitions, positions, Provider as AlertProvider } from 'react-alert'
 import AlertTemplate from 'react-alert-template-basic'
-import ReactGA from 'react-ga'
-
-const TRACKING_ID = "G-Q6E9KV4GKH";
-ReactGA.initialize(TRACKING_ID);
 
 function getLibrary(provider){
   return new Web3Provider(provider);

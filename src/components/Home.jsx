@@ -1,6 +1,7 @@
 import React from "react";
 import "./css/home.css";
 import ReactWhatsapp from "react-whatsapp";
+import useAnalyticsEventTracker from "../useAnalyticsEventTracker";
 import {
   dinner,
   taxi,
@@ -36,6 +37,7 @@ import {
 } from "./icons";
 
 function Home() {
+  const gaEventTracker = useAnalyticsEventTracker('Home')
   const data = [
     {
       name: "Groceries 24/7",
@@ -56,6 +58,7 @@ function Home() {
             number={"+254115144146"}
             message={"Hello DianiApp 😊 I need Food / Drinks 🍾"}
             className="whatsapp"
+            onClick={()=>gaEventTracker('Food and Drinks')}
           >
             <div className="Tab-item">
               <div className="">{foodgrp} </div>
