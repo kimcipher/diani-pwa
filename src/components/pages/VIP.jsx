@@ -53,12 +53,14 @@ function VIP() {
   return (
     <div className="activities">
       <h2>VIP</h2>
-      <ins class="adsbygoogle"
-      style="display:block"
-      data-ad-client="ca-pub-3733538819337098"
-      data-ad-slot="4594064206"
-      data-ad-format="auto"
-      data-full-width-responsive="true"></ins>
+        <Adsense
+          client="ca-pub-3733538819337098"
+          slot="4594064206"
+          style={{ display: 'block' }}
+          layout="in-article"
+          format="fluid"
+          data-full-width-responsive="true"
+        />
       <div className="Tabs-container">
         {data.map((item, index) => {
           let tag = item.name
