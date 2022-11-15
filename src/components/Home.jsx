@@ -65,25 +65,31 @@ function Home() {
               <div className="grid-right"> &nbsp;&nbsp; Food   &  Drinks 24/7</div>
             </div>
           </ReactWhatsapp>
-        {data.map((item, index) => (
+        {data.map((item, index) => {
+          let tag = item.name;
+          return (
           <ReactWhatsapp
             key={index}
             number={item.number}
             message={item.message}
             className={item.className}
+            onClick={()=>gaEventTracker(tag)}
           >
             <div className="Tab-item">
               <div className="grid-left">{item.image}</div>
               <div className="grid-right">{item.name}</div>
             </div>
           </ReactWhatsapp>
-        ))}
+          )
+        }
+        )}
          
        {/* <h4>RENT A {rocket}</h4> */}
        <ReactWhatsapp
               number="+254115144146"
               message="Hello DianiApp 😊 I need to rent a Scooter/ E-Bike/ Car/ Taxi / a Boat ⛵"
               className="whatsapp"
+              onClick={()=>gaEventTracker('Scooter, eBike')}
             >
           <div className="Tab-item" style={{display:"flex", justifyContent:"space-around"}}>
             <div className="flex-car-item pxl">Scooter<br/>{scooter}</div>  
@@ -99,6 +105,7 @@ function Home() {
               number="+254115144146"
               message={"Hello DianiApp 😊 I need  Parcel Delivery / Hire a Tech Guru / Hire Repair/FixIt 🛠️"}
               className="whatsapp"
+              onClick={()=>gaEventTracker('Rent A;')}
             >
           <div className="Tab-item" style={{display:"flex", justifyContent:"space-around"}}>
             <div className="pxl" ><p style={{background:"none"}}>{packageicon}<br/>Parcel <br/> Delivery </p></div> 
@@ -114,6 +121,7 @@ function Home() {
             number={"+254115144146"}
             message={"Hello DianiApp 😊 I need  Accomodation 🛌"}
             className="whatsapp"
+            onClick={()=>gaEventTracker('Accomodation')}
           >
             <div className="Tab-item">
             <div className="grid-left">{bed}</div>
@@ -125,6 +133,7 @@ function Home() {
             number={"+254115144146"}
             message={"Hello DianiApp 😊 I need a Dinner Reservation 🍽️"}
             className="whatsapp"
+            onClick={()=>gaEventTracker('Dinner Reservation')}
           >
             <div className="Tab-item">
             <div className="grid-left">{dinner}</div>
@@ -136,6 +145,7 @@ function Home() {
             number={"+254115144146"}
             message={"Hello DianiApp 😊 I need Airport Transportation ✈️"}
             className="whatsapp"
+            onClick={()=>gaEventTracker('Airport Transportation')}
           >
             <div className="Tab-item">
             <div className="grid-left">{plane}</div>
@@ -148,6 +158,7 @@ function Home() {
             number={"+254115144146"}
             message={"Hello DianiApp 😊 I need  Cash and Currency exchange 💰"}
             className="whatsapp"
+            onClick={()=>gaEventTracker('Cash and currencies exchange')}
           >
             <div className="Tab-item">
             <div className="grid-left">{ksh}</div>
@@ -159,6 +170,7 @@ function Home() {
             number={"+254115144146"}
             message={"Hello DianiApp 😊 I need to spend Crypto ₿"}
             className="whatsapp"
+            onClick={()=>gaEventTracker('Spend Crypto')}
           >
             <div className="Tab-item">
             <div className="grid-left">{cryptobtnnew}</div>
@@ -170,6 +182,7 @@ function Home() {
               number={"+254115144146"}
               message={"Hello DianiApp 😊 I need to send Crypto ₿"}
               className="shrink"
+              onClick={()=>gaEventTracker('Send Crypto')}
             >
               <div className="bg">
                 <div className="shrink">{sendcrypto}</div>
@@ -181,6 +194,7 @@ function Home() {
               number={"+254115144146"}
               message={"Hello DianiApp 😊 I need to receive Crypto ₿"}
               className="shrink"
+              onClick={()=>gaEventTracker('Receive Crypto')}
             >
               <div className="bg">
               <div className="shrink">{receivecrypto}</div>
@@ -195,6 +209,7 @@ function Home() {
             number={"+254115144146"}
             message={"Hello DianiApp 😊 I need Shopping 🛒"}
             className="whatsapp"
+            onClick={()=>gaEventTracker('Fast Shopping')}
           >
             <div className="Tab-item" style={{display:"flex", justifyContent:"space-around"}}>
               <div className="flex-car-item pxl">{dress}</div> 
@@ -210,6 +225,7 @@ function Home() {
             number={"+254115144146"}
             message={"Hello DianiApp 😊 I need Tech Gadgets 📱"}
             className="whatsapp"
+            onClick={()=>gaEventTracker('Tech gadgets')}
           >
             <div className="Tab-item" style={{display:"flex", justifyContent:"space-around"}}>
               <div className="flex-car-item pxl">{phone}</div> 
@@ -224,6 +240,7 @@ function Home() {
             number={"+254115144146"}
             message={"Hello DianiApp 😊 I need to Purchase Sim Cards 📦"}
             className="whatsapp"
+            onClick={()=>gaEventTracker('Purchase sim cards')}
           >
             <div className="Tab-item">
             <div className="grid-left">{simcard}</div>
@@ -235,6 +252,7 @@ function Home() {
             number={"+254115144146"}
             message={"Hello DianiApp 😊 I need Package Delivery(Amazon US) 📦"}
             className="whatsapp"
+            onClick={()=>gaEventTracker('Package Delivery Amazon US ')}
           >
             <div className="Tab-item">
             <div className="grid-left">{amazonpkgo}</div>
@@ -246,6 +264,7 @@ function Home() {
             number={"+254115144146"}
             message={"Hello DianiApp 😊 I need Package Delivery(Amazon UK/EUR) 📦"}
             className="whatsapp"
+            onClick={()=>gaEventTracker('Package Delivery Amazon UK/EUR')}
           >
             <div className="Tab-item">
             <div className="grid-left">{amazonpkgo}</div>
