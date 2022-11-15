@@ -98,7 +98,7 @@ function Activities() {
                         </div>
                         <div className="text">
                             <h5 style={{textAlign:"left", padding:"20px", color:"#ff66ff", fontSize:"1.2em", textTransform:"uppercase"}}>{item.name} &nbsp;<span style={{fontSize:"0.5em"}}>{item.duration}</span></h5>
-                            <p style={{padding:"20px"}}> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus similique quae eveniet odio ipsa repudiandae, nihil voluptatum recusandae. Sequi fugit explicabo accusamus reiciendis nostrum cum odit molestiae distinctio dolorem! Est.</p>
+                            <p style={{padding:"20px"}}> {item.description}</p>
                         </div>
                     </div>
                     <ReactWhatsapp
