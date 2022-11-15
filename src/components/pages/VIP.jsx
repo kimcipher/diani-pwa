@@ -55,10 +55,11 @@ function VIP() {
       <h2>VIP</h2>
         <Adsense
           client="ca-pub-3733538819337098"
-          slot="7259870550"
+          slot="4594064206"
           style={{ display: 'block' }}
           layout="in-article"
           format="fluid"
+          data-full-width-responsive="true"
         />
       <div className="Tabs-container">
         {data.map((item, index) => {
