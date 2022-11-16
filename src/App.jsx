@@ -22,6 +22,7 @@ import {WalletProvider}  from  "./context/WalletContext"
 import Signup from "./components/Wifi/Signup"
 import SignIn from "./components/Wifi/SignIn"
 import ReactGA from 'react-ga'
+import {wifi} from "./components/icons"
 
 const TRACKING_ID = "G-Q6E9KV4GKH";
 ReactGA.initialize(TRACKING_ID);
@@ -45,6 +46,16 @@ function App() {
   const setPopupOpen = () => {
     setItIsOpen(!itIsOpen);
   }
+
+  const Redirect = () => {
+    return (
+      <>
+      <a href="https://lalowifi.me" style={{position:"fixed", bottom:"11vh", left:"20px", borderRadius:"50%",boxShadow:" navy 0px 5px 15px"}}>
+      {wifi}
+      </a>
+      </>
+    )
+  }
   
 
   return (
@@ -56,6 +67,7 @@ function App() {
     ):(
       <>
       <InterractiveSection/>
+      <Redirect/>
       <DefaultNav/>
       <Nav />
       {/* <Marquee/> */}
