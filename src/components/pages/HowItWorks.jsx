@@ -31,12 +31,12 @@ function HowItWorks() {
   const showModal = () => {
     setOpen(!open);
   };
-  const text = "hellodianiapp@gmail.com";
-  const copyEmail = (str) => {
-    if (navigator && navigator.clipboard && navigator.clipboard.writeText)
-      return navigator.clipboard.writeText(str);
-    return Promise.reject("The Clipboard API is not available.");
-  };
+  // const text = "hellodianiapp@gmail.com";
+  // const copyEmail = (str) => {
+  //   if (navigator && navigator.clipboard && navigator.clipboard.writeText)
+  //     return (navigator.clipboard.writeText(str), alert("hellodianiapp@gmail.com copied"));
+  //   return Promise.reject("The Clipboard API is not available.");
+  // };
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
@@ -99,7 +99,9 @@ function HowItWorks() {
   const CopyButton = ({ text }) => {
     const clickRef = useCopyToClipboard(
       text,
-      () => console.log("Copyied!"),
+      function(){
+        alert("hellodianiapp@gmail.com copied")
+      },
       () => console.log("Unable to copy")
     );
     return (
