@@ -23,6 +23,7 @@ import Signup from "./components/Wifi/Signup"
 import SignIn from "./components/Wifi/SignIn"
 import ReactGA from 'react-ga'
 import {wifi} from "./components/icons"
+// import RatingView from "./components/pages/RatingView";
 
 const TRACKING_ID = "G-Q6E9KV4GKH";
 ReactGA.initialize(TRACKING_ID);
@@ -50,9 +51,9 @@ function App() {
   const Redirect = () => {
     return (
       <>
-      <a href="https://lalowifi.me" style={{position:"fixed", bottom:"11vh", left:"20px", borderRadius:"50%",boxShadow:" navy 0px 5px 15px"}}>
-      {wifi}
-      </a>
+        <a href="https://lalowifi.me" style={{position:"fixed", bottom:"11vh", left:"20px", borderRadius:"50%",boxShadow:" navy 0px 5px 15px", margin:"0", padding:"0"}}>
+          {wifi}
+        </a>
       </>
     )
   }
@@ -88,7 +89,7 @@ function App() {
         <Route path="/VIP" element={<VIP />} />
         <Route path="/Activities" element={<Activities />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
-        {/* <Route path="/rate-us" element={<Rating />} /> */}
+        {/* <Route path="/rate-us" element={<RatingView/>} /> */}
       </Routes>
       <MobileFooter setItIsOpen={setPopupOpen} />
     </>

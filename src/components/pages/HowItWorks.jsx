@@ -113,9 +113,9 @@ function HowItWorks() {
           width: "40%",
           cursor:"pointer",
         }}
-        onClick={
-          alert("(hellodianiapp@gmail.com) Copied")
-        }
+        // onClick={
+        //   alert("(hellodianiapp@gmail.com) Copied")
+        // }
       >
         {paypal}
         <h4 style={{marginLeft:"10px"}}>PayPal </h4>

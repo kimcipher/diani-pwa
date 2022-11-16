@@ -6,7 +6,7 @@
     "@ctrl/react-adsense": "^1.6.1",
     "@ethersproject/providers": "^5.7.2",
     "@fontsource/montserrat": "^4.5.13",
-    "@formspree/react": "^2.4.0",
+    "@formspree/react": "^2.4.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@uauth/bnc-onboard": "^2.4.0",
