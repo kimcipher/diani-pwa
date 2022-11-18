@@ -23,6 +23,7 @@ import Signup from "./components/Wifi/Signup"
 import SignIn from "./components/Wifi/SignIn"
 import ReactGA from 'react-ga'
 import {wifi} from "./components/icons"
+import usePageTracking from "./usePageTracking";
 // import RatingView from "./components/pages/RatingView";
 
 const TRACKING_ID = "G-Q6E9KV4GKH";
@@ -30,6 +31,7 @@ ReactGA.initialize(TRACKING_ID);
 
 
 function App() {
+  usePageTracking();
   // const [cookies, setCookie, removeCookie] = useCookies(['cookie-name']);
   const [itIsOpen, setItIsOpen]= useState(false)
   // eslint-disable-next-line no-unused-vars
