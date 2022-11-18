@@ -56,7 +56,6 @@ function VIP() {
         <Adsense
           client="ca-pub-3733538819337098"
           slot="4594064206"
-          style={{ display: 'block', border:"1px solid red" }}
           layout="in-article"
           format="fluid"
           data-full-width-responsive="true"
