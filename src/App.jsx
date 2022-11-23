@@ -32,6 +32,7 @@ ReactGA.initialize(TRACKING_ID);
 
 function App() {
   usePageTracking();
+  
   // const [cookies, setCookie, removeCookie] = useCookies(['cookie-name']);
   const [itIsOpen, setItIsOpen]= useState(false)
   // eslint-disable-next-line no-unused-vars
@@ -83,6 +84,7 @@ function App() {
       <Routes>
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/signin" element={<SignIn/>}/>
+        <Route path="/:from" element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/popular" element={<Home />} />
         <Route path="/Wellness" element={<Wellness />} />

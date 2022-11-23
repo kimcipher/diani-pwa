@@ -1,5 +1,6 @@
 import React from "react";
 import "./css/home.css";
+import { useParams } from "react-router-dom";
 import ReactWhatsapp from "react-whatsapp";
 import useAnalyticsEventTracker from "../useAnalyticsEventTracker";
 import {
@@ -38,6 +39,32 @@ import {
 
 function Home() {
   const gaEventTracker = useAnalyticsEventTracker('Home')
+  let {from} = useParams();
+  console.log("*******",from)
+  if(from){
+    let submitBacklink = async () => {
+      try{
+        let res = await fetch("https://api.dianiapp.me/backlink/new", {
+          method:"POST",
+          headers:{
+            'Content-Type':'application/json',
+            'accept':'application/json'
+          },
+          body: JSON.stringify({
+            source:from
+          })
+        });
+        let resJson = await res.json();
+        console.log(resJson)
+  
+      }
+      catch(err){
+        console.log(err)
+      }
+    }
+    submitBacklink();
+  }
+ 
   const data = [
     {
       name: "Groceries 24/7",
