@@ -2,8 +2,10 @@ import React from "react";
 import "../css/home.css";
 import ReactWhatsapp from "react-whatsapp";
 import { drink, dinner, plane, fx, food } from "../icons";
+import useAnalyticsEventTracker from "../../useAnalyticsEventTracker";
 
 function NightLife() {
+  const gaEventTracker = useAnalyticsEventTracker('NightLife')
   const data = [
     {
       name: "Dinner Reservation",
@@ -50,16 +52,21 @@ function NightLife() {
     <div className="container">
       <h2>NightLife</h2>
       <div className="Tabs-container">
-        {data.map((item, index) => (
+        {data.map((item, index) => {
+          let tag = item.name
+          return(
           <ReactWhatsapp
             key={index}
             number={item.number}
             message={item.message}
             className={item.className}
+            onClick={()=>gaEventTracker({tag})}
           >
             <div className="Tab-item-wellness"> {item.name}</div>
           </ReactWhatsapp>
-        ))}
+          )
+          }
+        )}
       </div>
     </div>
   );

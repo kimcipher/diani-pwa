@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 // import { Carousel } from 'react-responsive-carousel';
+import useAnalyticsEventTracker from "../../useAnalyticsEventTracker";
 import "../css/carousel.css";
 import {
   mpesa,
@@ -30,12 +31,12 @@ function HowItWorks() {
   const showModal = () => {
     setOpen(!open);
   };
-  const text = "hellodianiapp@gmail.com";
-  const copyEmail = (str) => {
-    if (navigator && navigator.clipboard && navigator.clipboard.writeText)
-      return navigator.clipboard.writeText(str);
-    return Promise.reject("The Clipboard API is not available.");
-  };
+  // const text = "hellodianiapp@gmail.com";
+  // const copyEmail = (str) => {
+  //   if (navigator && navigator.clipboard && navigator.clipboard.writeText)
+  //     return (navigator.clipboard.writeText(str), alert("hellodianiapp@gmail.com copied"));
+  //   return Promise.reject("The Clipboard API is not available.");
+  // };
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
@@ -98,7 +99,9 @@ function HowItWorks() {
   const CopyButton = ({ text }) => {
     const clickRef = useCopyToClipboard(
       text,
-      () => console.log("Copyied!"),
+      function(){
+        alert("hellodianiapp@gmail.com copied")
+      },
       () => console.log("Unable to copy")
     );
     return (
@@ -112,9 +115,9 @@ function HowItWorks() {
           width: "40%",
           cursor:"pointer",
         }}
-        onClick={
-          alert("(hellodianiapp@gmail.com) Copied")
-        }
+        // onClick={
+        //   alert("(hellodianiapp@gmail.com) Copied")
+        // }
       >
         {paypal}
         <h4 style={{marginLeft:"10px"}}>PayPal </h4>

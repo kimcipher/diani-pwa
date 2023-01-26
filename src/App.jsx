@@ -11,24 +11,28 @@ import VIP from "./components/pages/VIP";
 import MobileNav from "./components/MobileNav";
 import Type from "./components/Type";
 import HowItWorks from "./components/pages/HowItWorks";
-// import AddToHomeScreen from "@ideasio/add-to-homescreen-react";
 import BotIcon from "./components/BotIcon"
-// import Rating from "./components/pages/RatingView"
 import "animate.css/animate.min.css";
 import DefaultNav from "./components/DefaultNav";
-// import {AnimationOnScroll} from "react-animation-on-scroll"
-// import Popup from "./components/Popup"
-// import {Toaster}  from  "react-hot-toast"
 import Lalo from "./components/Lalo"
 import "@fontsource/montserrat"; // Defaults to weight 400.
 import InterractiveSection from "./components/WalletConnector.jsx";
 import Preloader from "./components/PreLoad/Preloader";
-// import {useCookies} from 'react-cookie';
 import {WalletProvider}  from  "./context/WalletContext"
 import Signup from "./components/Wifi/Signup"
 import SignIn from "./components/Wifi/SignIn"
+import ReactGA from 'react-ga'
+import {wifi} from "./components/icons"
+import usePageTracking from "./usePageTracking";
+// import RatingView from "./components/pages/RatingView";
+
+const TRACKING_ID = "G-Q6E9KV4GKH";
+ReactGA.initialize(TRACKING_ID);
+
 
 function App() {
+  usePageTracking();
+  
   // const [cookies, setCookie, removeCookie] = useCookies(['cookie-name']);
   const [itIsOpen, setItIsOpen]= useState(false)
   // eslint-disable-next-line no-unused-vars
@@ -47,26 +51,24 @@ function App() {
     setTimeout(() => setIsLoading(false), 3000);
   }, [])
 
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  },[])
+
   const setPopupOpen = () => {
     setItIsOpen(!itIsOpen);
   }
+
+  const Redirect = () => {
+    return (
+      <>
+        <a href="https://lalowifi.me" style={{position:"fixed", bottom:"11vh", left:"20px", borderRadius:"50%",boxShadow:" navy 0px 5px 15px", margin:"0", padding:"0"}}>
+          {wifi}
+        </a>
+      </>
+    )
+  }
   
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //    setIsOpen(true)  
-  //   }, [5000]);
-  //   // I will be deleted while component is unmounting.
-  //   return () => clearTimeout(timer) 
-  //   }, []);
-  //   useEffect(() => {
-  //     const timer = setTimeout(() => {
-  //      setIsOpen(false)  
-  //     }, [20000]);
-  //     // I will be deleted while component is unmounting.
-  //     return () => clearTimeout(timer) 
-  //     }, []);
-
 
   return (
     <WalletProvider>
@@ -77,6 +79,7 @@ function App() {
     ):(
       <>
       <InterractiveSection/>
+      <Redirect/>
       <DefaultNav/>
       <Nav />
       {/* <Marquee/> */}
@@ -89,6 +92,7 @@ function App() {
       <Routes>
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/signin" element={<SignIn/>}/>
+        <Route path="/:from" element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/popular" element={<Home />} />
         <Route path="/Wellness" element={<Wellness />} />
@@ -97,7 +101,7 @@ function App() {
         <Route path="/VIP" element={<VIP />} />
         <Route path="/Activities" element={<Activities />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
-        {/* <Route path="/rate-us" element={<Rating />} /> */}
+        {/* <Route path="/rate-us" element={<RatingView/>} /> */}
       </Routes>
       <MobileFooter setItIsOpen={setPopupOpen} />
     </>

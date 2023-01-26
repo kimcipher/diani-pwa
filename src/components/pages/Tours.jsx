@@ -2,8 +2,10 @@ import React from "react";
 import "../css/act.css";
 import ReactWhatsapp from "react-whatsapp";
 import {sunset, glassboat, dolphins} from "./images"
+import useAnalyticsEventTracker from "../../useAnalyticsEventTracker";
 
 function Activities() {
+  const gaEventTracker = useAnalyticsEventTracker('Tours')
   const data = [
     {
       name: "Sunset",
@@ -36,6 +38,7 @@ function Activities() {
       <div className="act-container">
         {data.map ((item, index) => {
             let image = item.background
+            let tag = item.name
             return(
                 <div>
                     <div className="act-item">
@@ -46,6 +49,7 @@ function Activities() {
                         number={item.number}
                         message={item.message}
                         className="none"
+                        onClick={()=>gaEventTracker({tag})}
                     >
                     <h4>Book Now</h4>
                     </ReactWhatsapp>

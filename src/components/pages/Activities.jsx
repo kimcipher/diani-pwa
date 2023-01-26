@@ -8,9 +8,11 @@ import skydiving from "../assets/skydiving.png"
 import skiing from "../assets/skiing.jpg"
 import sunset from "../assets/activities/Sunset.webp"
 import glassboat from "../assets/glassboat.png"
+import useAnalyticsEventTracker from "../../useAnalyticsEventTracker";
 
 
 function Activities() {
+  const gaEventTracker = useAnalyticsEventTracker('Activities')
   const data = [
     {
         name: "Snorkeling",
@@ -63,7 +65,7 @@ function Activities() {
       number: "+254115144146",
       background: glassboat,
       price:"1000 Ksh",
-      description:"LOcated on the south coast of Kenya, Experience the beauty of nature while sailing towards the magical sunset/sunrise while enjoying the peace and beauty of the ocean. During the season you might occasionally see dolphins. As you sail from the shores, you enjoy the comfort and beautiful decorations os the show while enjoying your favourite drinks and alcohol",
+      description:"Located on the south coast of Kenya, Experience the beauty of nature while sailing towards the magical sunset/sunrise while enjoying the peace and beauty of the ocean. During the season you might occasionally see dolphins. As you sail from the shores, you enjoy the comfort and beautiful decorations os the show while enjoying your favourite drinks and alcohol",
       duration:"Duration: 24hr"
     },
   ];
@@ -76,6 +78,7 @@ function Activities() {
       <div className="act-container">
         {data.map ((item, index) => {
             let image = item.background
+            let tag = item.name
             return(
                 <div>
                     <div className="act-item">
@@ -95,7 +98,7 @@ function Activities() {
                         </div>
                         <div className="text">
                             <h5 style={{textAlign:"left", padding:"20px", color:"#ff66ff", fontSize:"1.2em", textTransform:"uppercase"}}>{item.name} &nbsp;<span style={{fontSize:"0.5em"}}>{item.duration}</span></h5>
-                            <p style={{padding:"20px"}}> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus similique quae eveniet odio ipsa repudiandae, nihil voluptatum recusandae. Sequi fugit explicabo accusamus reiciendis nostrum cum odit molestiae distinctio dolorem! Est.</p>
+                            <p style={{padding:"20px"}}> {item.description}</p>
                         </div>
                     </div>
                     <ReactWhatsapp
@@ -103,6 +106,7 @@ function Activities() {
                         number={item.number}
                         message={item.message}
                         className="none"
+                        onClick={()=>gaEventTracker({tag})}
                     >
                     <h4>Book Now</h4>
                     </ReactWhatsapp>
