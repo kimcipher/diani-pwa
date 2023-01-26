@@ -35,6 +35,14 @@ function App() {
   const [isOpen, setIsOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
 
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const promo_id = urlParams.get("promo_id");
+  if(promo_id!=null){
+    console.log("promo_id",promo_id)
+  }
+  
+
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 3000);
   }, [])

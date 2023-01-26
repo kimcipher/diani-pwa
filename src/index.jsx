@@ -5,12 +5,7 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./registerServiceWorker";
 import PWAPrompt from "react-ios-pwa-prompt";
-import "@rainbow-me/rainbowkit/styles.css";
-import {
-  // getDefaultWallets,
-  // RainbowKitProvider,
-  // darkTheme,
-} from "@rainbow-me/rainbowkit";
+// import "@rainbow-me/rainbowkit/styles.css";
 // import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 // import { alchemyProvider } from "wagmi/providers/alchemy";
 // import { publicProvider } from "wagmi/providers/public";
