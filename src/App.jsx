@@ -24,6 +24,7 @@ import SignIn from "./components/Wifi/SignIn"
 import ReactGA from 'react-ga'
 import {wifi} from "./components/icons"
 import usePageTracking from "./usePageTracking";
+import axios from "axios";
 // import RatingView from "./components/pages/RatingView";
 
 const TRACKING_ID = "G-Q6E9KV4GKH";
@@ -38,21 +39,35 @@ function App() {
   // eslint-disable-next-line no-unused-vars
   const [isOpen, setIsOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
+  const [ip,setIP] = useState('');
 
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const promo_id = urlParams.get("promo_id");
-  if(promo_id!=null){
-    console.log("promo_id",promo_id)
+  const getData = async() => {
+    if(promo_id!=null){
+      const res = await axios.get('https://geolocation-db.com/json/')
+        console.log(res.data);
+        const IPAddress = await res.data.IPv4
+        console.log("IP ADDRESS",IPAddress)
+      const data = await axios.get(`http://localhost:8000/${IPAddress}/${promo_id}`)
+      console.log({"axios response":data})
+      console.log("promo_id",promo_id)
+    
+    //creating function to load ip address from the API
+    }
   }
   
-
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 3000);
   }, [])
 
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
+  },[])
+
+  useEffect(() => {
+    getData();
   },[])
 
   const setPopupOpen = () => {

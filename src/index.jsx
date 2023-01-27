@@ -5,13 +5,10 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./registerServiceWorker";
 import PWAPrompt from "react-ios-pwa-prompt";
-<<<<<<< HEAD
 // import "@rainbow-me/rainbowkit/styles.css";
 // import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 // import { alchemyProvider } from "wagmi/providers/alchemy";
 // import { publicProvider } from "wagmi/providers/public";
-=======
->>>>>>> 0d3dcdbcc40a8723fbdd7800fecf69c9080e865d
 import reportWebVitals from "./reportWebVitals";
 import ReactPwa from "react-pwa-app";
 import { ClearBrowserCacheBoundary } from "react-clear-browser-cache";
